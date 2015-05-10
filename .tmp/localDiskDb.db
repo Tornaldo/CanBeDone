@@ -25,12 +25,9 @@
     "eduinstitution": [],
     "idea": [
       {
-        "name": "new name",
-        "what": "Icea cream",
-        "why": "because",
+        "id": 1,
         "createdAt": "2015-05-10T10:47:53.605Z",
-        "updatedAt": "2015-05-10T10:48:45.586Z",
-        "id": 1
+        "updatedAt": "2015-05-10T10:48:45.586Z"
       }
     ],
     "resource": [

@@ -1,0 +1,96 @@
+
+
+    <div class="login-control clearfix">
+        <form ng-submit="login()" class="form-horizontal clearfix">
+            <div >
+                <h3>Sign In</h3>
+                <hr>
+            </div>
+            <div class="col-lg-6 pull-left">                            
+                
+               
+                <a href="" class="btn btn-large btn-block btn-fb">Login with Facebook</a>
+                <a href="" class="btn btn-large btn-block btn-google">Login with Google</a>
+
+
+                <a href="" class="btn btn-large  btn-singup" data-toggle="modal" data-target="#myModal">Sign up</a>
+            </div>
+            <div class="col-lg-6 use-account">
+                
+                <div class="form-body">                              
+                    <div class="pair-group">
+                       <input type="email" class="form-control" id="inputEmail1" ng-model="credentials.email" placeholder="Email"/>
+                       <input type="password" class="form-control" id="inputPassword1" ng-model="credentials.password" placeholder="Password">         
+                    </div>
+                </div>                                 
+                <div class="form-footer">     
+                    <button class="btn btn-large btn-blue btn-block btn-signin" type="submit">Log In</button> 
+                    <p class="center">
+                        <a href="#">Forgot your password?</a>
+                    </p>
+                </div>    
+            </div>  
+        </form>        
+
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Register</h4>
+          </div>
+          <div class="modal-body">
+            <form name="userInfoForm" class="form-horizontal">
+                <div class="control-group" ng-class="getCssClasses(userInfoForm.email)">
+
+                    <label>E-mail</label>
+                    <input type="email" class="form-control" id="inputEmail2" ng-model="user.email" name="email" required>
+                    <span ng-show="showError(userInfoForm.email, 'email')" class="help-inline">You must enter a valid email</span>
+                    <span ng-show="showError(userInfoForm.email, 'required')" class="help-inline">This field is required</span>
+                    <br>
+                    <label>Last name</label>
+                    <input type="text" ng-model="user.lastName" class="form-control" id="inputlastName2" name="lastName" required>
+                    <br>
+
+                    <label>First name</label>
+                    <input type="text" ng-model="user.firstName" name="firstName" class="form-control" id="inputfirstName2" required>
+                    <br>
+
+                    <label>Website</label>
+                    <input type="url" ng-model="user.website" name="firstName" class="form-control" id="inputwebsite2" name="website">
+                    <br>
+
+                    <label>Description</label>
+                    <textarea ng-model="user.description" class="form-control" id="inputdescription2" name="description"></textarea>
+                    <br>
+
+                    <label>Password</label>
+                    <input type="password" ng-model="user.password" class="form-control" id="inputpassword2" name="password" required>
+                    <br>
+
+                    <label>Password (repeat)</label>
+                    <input type="password" ng-model="repeatPassword" class="form-control" id="inputrepeatPassword2" name="repeatPassword" required>
+                    <br>
+
+                    <label>Roles</label>
+                    <label class="checkbox"><input type="checkbox"  ng-model="user.admin" name="admin"> Is Administrator</label>
+                    <br>
+
+                    <button class="btn btn-default" ng-click="save()" ng-disabled="!canSave()">Save</button>
+                </div>
+
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>

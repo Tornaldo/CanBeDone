@@ -1,0 +1,70 @@
+// =========================================================
+//		Application
+// =========================================================
+
+
+// ----------------
+//	SASS Libraries
+// ----------------
+
+/*	Below is the libraries used.
+**	
+*/
+
+// COMPASS
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+@import "compass/css3/appearance";
+@import "compass/css3/border-radius";
+@import "compass/css3/opacity";
+
+
+
+// ----------------
+//	Custom classes
+// ----------------
+
+/*	The SASS code are divided into folders following the basics of 
+**	SMACSS code organizing principle. In each category there are a 
+**	manifest-file called index.scss, referenced below that keeps
+**	track of all the files in the given category.
+*/
+
+
+
+// UTILITIES		config, functions, mixins, helpers
+@import "utilities/index";
+
+// BASE STYLES		base, normalize
+@import "base/index";
+
+// LAYOUT STYLES 	[empty]
+@import "layout/index";
+
+// MODULES 			"Main folder", containing all the modulear parts.
+@import "modules/index";
+
+// STATES 			[empty]
+@import "states/index";
+
+/*
+//Depricated
+@import "depricated/_custom.scss";
+*/
+
+// ----------------
+//	Depricated
+// ----------------
+
+/* Old files waiting to be moved/removed.
+*/
+
+/*
+//page specific pages.
+@import "depricated/pages/home",
+        "depricated/pages/common",
+        "depricated/pages/ideaPage";
+
+//Old
+@import "depricated/_custom.scss";
+*/

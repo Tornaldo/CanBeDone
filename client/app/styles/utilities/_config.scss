@@ -1,0 +1,139 @@
+// =========================================================
+//		Fonts
+// =========================================================
+
+// Font sources
+$font-url--google		: "http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
+
+// Defailt fonts
+$font-family--primary 	: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family--secondary	: "Helvetica Neue", Helvetica, Arial sans-serif;
+
+// Font specifications
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+
+// =========================================================
+//		Colors
+// =========================================================
+
+// Base Colors
+$white	: #fff;
+$black	: #0b0b0b;
+$grey	: #797e83;
+
+$fern		: #5cb85c;
+$scooter	: #39b3d7;
+
+
+// Color Usage
+$color-primary	: $fern;
+$color-secondary: $scooter;
+//$color-accent	: ;
+$color-shadow	: $grey;
+
+// =========================================================
+//		From Custom
+// =========================================================
+	//colors
+	$bodyBackgroundColor: #f7f7f7;
+	$commonHeaderAndOtherBackgroundColor: #ffffff;
+	$commonHeaderBorderColor: #d4d4d4;
+	$fontColor_1: #ffffff;
+	$fontColor_2: black;
+	$fontColor_3: #333;
+	$fontColor_4: #7D8D7C;
+	$fontColor_5: #999;
+	$fontColor_6: #ffa500;
+	$sideNavLeftBackgroundColor: #080808;
+	$thumbnailBoxShadow: rgba(0,0,0,0.117647);
+	$fontColor_7: #898989;
+	$fontColor_8: #000;
+	$homeIdeaAreaBackgroundColor: #f3f6f6;
+	$frontAreaContainerBorderColor: rgba(0,0,0,0.05);
+	$fontColor_9: #444;
+	$fontColor_10: #808080;
+	$frontAreaContainerBackgroundColor: #fdfdfd;
+	$textAndBorderShadows: #ccc;
+
+	//fonts
+	$font_0: arial;
+	$font_1: helvetica neue;
+	$font_2: helvetica;
+	$font_3: sans-serif;
+	$font_4: default;	
+
+// Color palette modifiers
+$palettes: (
+	grey: (
+		xx-light : lighten($grey, 43%),
+		x-light  : lighten($grey, 35%),
+	  	light    : lighten($grey, 12%),
+	  	base     : $grey,
+	 	dark     : darken($grey, 8%),
+	 	x-dark   : darken($grey, 16%)
+	),
+	black: (
+		light    : lighten($black, 10%),
+		base     : $black,
+		dark     : darken($black, 10%)
+	),
+	white: (
+		base 	 : $white
+	)
+);
+
+
+//UI colors
+/*
+$success	: $fern;
+$neutral	: $scooter;
+$error		: ;
+$warning	: ;
+*/
+
+
+// =========================================================
+//		Text
+// =========================================================
+
+$base__font-size	: 16px;
+$base__line			: 24px;
+
+
+
+
+// =========================================================
+//		Other
+// =========================================================
+
+// Border radius
+$br--default			: 0.4em;
+$br--round				: 50%;
+
+// Time
+$transition-duration	: 0.3s;
+
+
+// =========================================================
+//		Grid
+// =========================================================
+
+$g-col-width	: 65px;
+$g-gutter-width	: 20px;
+$g-col-count	: 12;
+$g-cont-max-w	: 1050px;
+
+// =========================================================
+//		Media
+// =========================================================
+
+// Breakpoints
+
+$breakpoint-sm	: 1px;
+$breakpoint-md	: 768px;
+$breakpoint-lg	: 1100px;

@@ -1,0 +1,77 @@
+.user-profile-main-container {
+	margin-top: 60px;
+}
+
+.user-profile-container{
+	margin:0px auto;
+	display: table;
+	width: 1000px;
+}
+
+
+.user-profile-thumbnail-container {
+	border-radius: 0px;
+	display: block;
+	padding: 4px;
+	margin-bottom: 20px;
+	line-height: 1.42857143;
+	background-color: #fff;
+	border: 1px solid #FFF;
+	border-radius: 4px;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;	
+	> {
+		img {
+			width: 121px;
+			background: black;
+			margin: 0px auto;
+			margin-bottom: 10px;
+		}
+		.list-group {
+			margin-bottom:2px;
+			> {
+			   .list-group-item {
+					border: 0;
+					background-color: #F2F3F5;
+					margin-bottom: 2px;
+					border-radius: 0px;	   
+			   }
+			   .list-group-item:first-child {
+					background: rgb(141, 146, 255);
+			   }
+			}
+		}
+	}
+}
+
+.user-profile-general-info > ul, .user-profile-education > ul, .user-profile-ideas-and-teams > ul,
+.user-profile-favorite-ideas > ul {
+	list-style: none;
+	padding: 15px
+}
+
+.user-profile-text {
+	padding:15px;
+}
+
+.user-profile-general-info-container > h3, .user-profile-text-container > h3, 
+.user-profile-education-container > h3, .user-profile-recomendations-container> h3,
+.user-profile-ideas-and-teams-container > h3, .user-profile-favorite-ideas-container > h3  {
+	margin: 2px;
+	padding-left: 2px;
+	border: 1px solid white;
+	box-shadow: 1px 1px #F4F4F4;
+	background: #F9F9F9;
+}
+
+.user-profile-general-info-container, .user-profile-text-container, 
+.user-profile-education-container, .user-profile-recomendations-container,
+.user-profile-ideas-and-teams-container, .user-profile-favorite-ideas-container {
+	background: white;
+	border: 1px solid #FCFCFC;
+	margin-bottom: 14px;
+}
+
+.user-profile-recomendations > p {
+	padding:15px;
+}

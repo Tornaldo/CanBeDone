@@ -1,0 +1,142 @@
+
+
+/*
+**	Idea profile
+*/
+
+.idea-profile {
+	margin-top: 100px;
+	margin-bottom: 80px;
+	width: 100%;
+
+	
+}
+
+.title-image-background {
+		height: 50%;
+		width: 110%;
+		margin-left: -5%;
+		@include filter(blur(29px));
+		opacity: 50;
+		position: fixed;
+		margin-top: -100px;
+		z-index: -2;
+	}
+
+/*
+**	Idea Container
+*/
+
+$ideacontainerBorderRadius: $cornerRadius_small;
+
+.idea-profile-container {
+	float: none;
+//	background: $commonHeaderAndOtherBackgroundColor;
+	background-color: #FFF;
+	padding-box: border-box;
+//	border-left: 1px solid #d0d5cb;
+//	border-right: 1px solid #d0d5cb;
+	border-radius: $ideacontainerBorderRadius;
+	outline: #121a0d none 0;
+	padding-bottom: 30px;
+	width: 664px;
+	z-index: -1;
+	margin: auto;
+	box-shadow: $thumbnailBoxShadow 0 2px 2px 0;
+
+	//title
+	.idea-profile-title {
+		font-style: default;
+		font-family: $font_4;
+		margin-top: 10px;
+		padding-top: 0;
+		margin-bottom: 2%;
+		padding-left: 10%;
+		padding-right: 10%;
+		font-size: 24px;
+	}
+
+	//image
+	.idea-profile-image-container {
+		overflow: hidden;
+		width: 664px;
+		border-bottom: 1px solid $textAndBorderShadows;
+		height: 250px;
+		border-radius: $ideacontainerBorderRadius $ideacontainerBorderRadius 0 0;
+		padding-top: 0;
+		z-index: 1;
+		position: relative;
+	}
+
+	//FAQ
+
+	//Comments
+}
+
+/*
+**	Sidebar Right
+*/
+
+.side-nav-right {
+
+	margin-top: 300px;
+
+	//Something
+	li.side-nav-right-idea-container {
+//		margin-top: 20px;
+		margin-left: 5px;
+		margin-bottom: 5px;
+		margin-right: 0;
+		padding: 0;
+	}
+
+	//container
+	.side-nav-right-idea-container {
+		&:hover {
+			background: #f0f0f0;
+			opacity: .8;
+			.other-ideas-text {
+				color: #fe9a2e;
+			}
+		}
+
+		//title
+		.sid-nav-right-title {
+			font-weight: 700;
+			margin: 0;
+			padding: 0 0 0 8px;
+		}
+
+		//text
+		.other-ideas-text {
+			font-size: 11px;
+			font-style: default;
+			color: default;
+		}
+
+		//image
+		.sid-nav-right-image {
+
+			height: 100%;
+			.image-inside-thumb-container-other-ideas {
+				width: auto;
+				height: 100%;
+				overflow: hidden;
+				position: relative;
+				padding: 0;
+			}
+			.image-inside-other-ideas-element {
+				outline: $fontColor_7 none 0;
+				overflow: hidden;
+				position: relative;
+				width: 70px;
+				height: 70px;
+			//	margin: -100px -1055px 100px -105px;
+				padding: 0;
+			}
+		}
+	}
+
+}
+
+

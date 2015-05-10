@@ -1,0 +1,107 @@
+
+/*
+** INTRO
+*/
+
+
+.home-intro {
+
+	@include mq(large) {
+    	background-image:url(http://www.wallchan.com/images/sandbox/53110-space-shuttle-launch.jpg);
+  	}
+  	@include mq(small) {
+  		background: #000;
+  		
+  	}
+
+	background-size: cover;
+	padding-bottom: 20px;
+ 	.intro-image {
+	  	position: absolute;
+	  	width: 100%;
+	  	z-index: -1;
+	  	margin-top: -300px;
+  }
+}
+.home-intro-para {
+	padding-top: 20px;
+	color: #fafafa;
+	font-size: 18px;
+}
+.home-intro-domain-para {
+	color: #ADD8E6;
+}
+.home-intro-video-container {
+	display: table;
+	width: 498px;
+	margin: 0 auto;
+}
+
+.home-intro-button-container {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+.home-intro-button {
+	width: 48%;
+	font-size: 14px;
+}
+.home-intro-search {
+	margin-top: 10px;
+	width: 498px;
+	margin-bottom: 10px;
+}
+
+
+iframe {
+	width: 498px;
+	height: 214px;
+}
+
+/*
+** IDEA BOX
+*/
+
+$ideaboxBorderRadius: $cornerRadius_small;
+
+.thumbnail-modified-ideas {
+	box-shadow: $thumbnailBoxShadow 0 2px 2px 0;
+	color: $fontColor_7;
+	position: relative;
+	text-align: left;
+	border-radius: $ideaboxBorderRadius;
+	font: normal normal normal 12px/18px $font_0, $font_1, $font_2, $font_3;
+	outline: $fontColor_7 none 0;
+	width: 100%;
+	height: 290px;
+	background: #FFF;
+	padding: 0;
+	&:hover {
+		.image-inside-thumb-container-ideas {
+			@include filter(grayscale(100%));
+		}
+	}
+	.image-inside-thumb-container-ideas {
+		overflow: hidden;
+		position: relative;
+		height: 50%;
+		width: 100%;
+		padding-top: 0;
+		border-radius: $ideaboxBorderRadius $ideaboxBorderRadius 0px 0px;
+		cursor: pointer;
+		@include filter(grayscale(0%));
+	}
+}
+
+
+//Carousel
+
+.carousel- {
+  &:inner {
+    width: 940px;
+    margin: 0 auto;
+  }
+  &:container {
+    width: 1070px;
+    margin: 0 auto;
+  }
+}

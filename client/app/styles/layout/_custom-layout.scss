@@ -1,0 +1,12 @@
+.common-header {
+  background: $commonHeaderAndOtherBackgroundColor;
+  z-index: 1;
+  position: relative;
+  border-bottom: 1px solid $commonHeaderBorderColor;
+}
+
+.header-container {
+  padding: 0px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}

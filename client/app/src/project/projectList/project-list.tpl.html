@@ -1,0 +1,52 @@
+<div class="project-list">
+		<!--Team-box-->
+		<div class="team-box row"  ng-repeat="project in elements | limitTo:2">
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			    <br>
+			    <h4 class="team-box-sub-header"><b>About team</b></h4>
+
+
+			    <p class="about-team-text">
+			         {{project.text_for_nonmembers}}
+			    </p>
+			    <a href="#" class="team-box-more hidden">...more</a>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			    <br>
+			    <h4 class="team-box-sub-header"><b>Comptence wanted</b></h4>
+			    <!--{{project.skills_wanted_by_project}}-->
+			    <ul>
+			        <li>
+			            <b>IT: </b>Databases, Algorithms, Artificial intelligence
+			        </li>
+			        <li>
+			            <b>Mathematics: </b>Logic, Mathematical proofs, Algorithms
+			        </li>
+			        <li>
+			            <b>Web development </b>
+			        </li>
+			        <li>
+			            <b>Marketing </b>
+			        </li>
+			        <li>
+			            <b>Something: </b>Something, Something else
+
+			        </li>
+			    </ul>
+			    <a href="#" class="team-box-more hidden">...more</a>
+			</div>
+			<div class="team-box-button-section">
+			    <div class="team-box-jointeam-container col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			        <a class="btn btn-primary btn-jointeam col-xs-12 col-sm-12 col-md-12 col-lg-12"><b><i
+			                class="fa fa-group"></i>&nbsp;Propose to join team</b></a>
+			    </div>
+			    <div class="team-box-getintouch-container col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			        <a class="btn btn-primary btn-getintouch col-xs-12 col-sm-12 col-md-12 col-lg-12"><b><i
+			                class="fa fa-coffee"></i>&nbsp;Get in touch</b></a>
+			    </div>
+			</div>
+		</div>
+		<hr>
+		<a href="" class="pull-right" ng-if="elements.length>2">More...</a>
+
+</div>

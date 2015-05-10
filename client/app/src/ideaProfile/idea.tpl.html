@@ -1,0 +1,151 @@
+<br>
+
+<div class="container">
+    <related-ideas content="relatedIdeas"></related-ideas>
+
+    <div class="idea-profile clearfix">
+        <div class="alert alert-success" ng-if="!project.length>0">
+            Realize your idea by creating a project for it! <a ng-href="#/idea/{{idea.id}}/create-project">Create Project</a>
+        </div>
+        <div class="alert alert-success" ng-if="!faq.length>0 ">
+            Enhance your idea by creating a faq! <a ng-href="#/idea/{{idea.id}}/create-faq">Create FAQ</a>
+        </div>
+        <!--picture-->
+        <div class="idea-profile-container clearfix">
+            <div class="idea-profile-image-container">
+                    <img src="img/SchoolOfAthens.jpg"
+                    class="image-title" alt="My Image">
+
+            </div>
+            <!--Title + What and why-->
+            <edit-field content="idea.title" on-edit="saveEdit()" template="{{'title'}}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            </edit-field>
+            
+            <div class="row idea-profile-why-what-container">
+                <edit-field content="idea.shortDescriptionWhat" on-edit="saveEdit()" label="What" class=" idea-profile-what col-xs-6 col-sm-6 col-md-6 col-lg-6"></edit-field>
+                <edit-field content="idea.shortDescriptionWhy" on-edit="saveEdit()"  label="Why" class="idea-profile-why col-xs-6 col-sm-6 col-md-6 col-lg-6"></edit-field>
+                
+            </div>
+            <edit-field content="idea.description" on-edit="saveEdit()" template="{{'text'}}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></edit-field>
+
+            <!-- FAQ area -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div ng-repeat="element in faq">
+                    <a ng-click="show = !show">{{element.question}}</a>
+                    <p ng-show="show">{{element.answer}}</p>
+                </div>
+                <button ng-if="faq.length <=0">Create FAQ!</button>
+                <button ng-if="faq.length >0" ng-click="faq.showFaqForm=true">Add more QA</button>
+                <div ng-if="faq.showFaqForm" ng-include="'/src/faq/faqForm/faq-form.tpl.html'" ng-controller="FaqFormCtrl"></div>
+            </div>
+
+            <!--User image and message button-->
+            <div class="media written-by pull-right col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <a class="pull-left" href="#">
+                    <div class="image-inside-thumb-written-by"><img class="media-object" src="img/ProfileImage7.jpg">
+                    </div>
+                </a>
+
+                <div class="media-body">
+                    <h4 class="media-heading written-by-heading"><a>{{idea.user.username }}</a></h4>
+
+                    <div class="btn btn-primary written-by-message-btn clearfix">
+                        <p class="written-by-message-btn-para"><i class="fa fa-envelope-o"></i> Message</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category listing section -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span ng-repeat="category in idea.categories"><a ng-click="redirectToCategory(category.id)">{{category.name}}</a></span>
+            </div>
+
+            <!--Like this idea!-->
+            <div class="idea-profile-like-this-idea col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+                    <p class="idea-profile-like-this-idea-text col-xs-7 col-sm-7 col-md-7 col-lg-7"><b>Do you like this
+                        idea?:</b></p>
+
+                    <p><i ng-click="slide()" class=" clickme1 fa fa-thumbs-o-up like-idea-icon col-xs-1 col-sm-1 col-md-1 col-lg-1"></i></p>
+                </div>
+            </div>
+
+            <script>
+                $( ".clickme1" ).click(function() {
+                    if($( "#drop1" ).is( ":hidden" ) ) {
+                      $("#drop1").slideDown(400);
+                      $(".idea-profile-like-this-idea").hide();
+
+                    } else {
+                      $( "#drop1" ).hide();
+
+                    }
+                  })  
+            </script>
+
+      
+
+           
+            
+
+            <!--Thanks for liking - share!-->
+            <!--Thanks for liking - your competence is wanted!-->
+            <div class="idea-profile-after-liking col-xs-12 col-sm-12 col-md-12 col-lg-12" id="drop1">
+                <div class="text-center">
+                    <div>
+                        <p class="idea-profile-after-liking-text-A">Thanks for liking the idea! Your strengths are needed on
+                            the team.</p>
+
+                        <p class="idea-profile-after-liking-text-B"><b>Would it be ok if the team leader contacted you?</b>
+                        </p>
+                        <a class="btn btn-success idea-profile-after-liking-team-leader-contact-btn"><b>Yes</b></a>
+                        <a class="btn btn-warning idea-profile-after-liking-team-leader-contact-btn"><b>No</b></a>
+                    </div>
+                </div>
+            </div>
+            <!--Thanks for liking - nobody is working on this idea-->
+
+
+            <project-list elements="project" ></project-list>
+            <project-create nr-project="project.length" idea="idea"></project-create>
+
+            <br><br>
+            <div class="row">
+                <div class="comment-container col-lg-10 clearfix">
+                        <h1 class="comment-title">
+                            <b>Comment</b>
+                        </h1>
+                        
+                        <ppcomment-viewer idea-model="idea" comment-model="ideaComment"></ppcomment-viewer>
+                        
+                        <hr>
+                        <br>
+                        <div class="row">
+                            <div ng-hide="noCommentView"><b> NO COMMENTS </b></div>
+                            <div ng-hide="sortCommentView" class="sort-by clearfix"><p >Sort comment: <select ng-model="sortCommentBy" class="" ng-options="option as option for option in commentSortOptions"></select> </p></div>
+
+                        </div>                   
+
+                        <article class="comment" ng-repeat="parentComment in ideaComment | orderBy:sortAttribute">
+                            <pcomment-viewer comment-model="parentComment" ></pcomment-viewer>
+                        </article>   
+                </div> 
+            </div>    
+
+            <hr>
+            <br><br>
+
+
+            <!--See additional teams-->
+            <!--Multiple teams are working on this idea-->
+      
+            <div class="idea-profile-team-box">
+                <div class="idea-profile-team-box-competence-wanted"></div>
+                <div class="idea-profile-team-box-general-info"></div>
+                <div class="idea-profile-team-box-text-from-leader"></div>
+                <div class="idea-profile-team-box-text-from-leader"></div>
+            </div>
+        </div>
+    </div>
+</div>

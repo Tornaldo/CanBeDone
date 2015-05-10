@@ -1,0 +1,191 @@
+<!--header-container-->
+  <div class="home-intro">
+    <div class="home-intro-para-container">
+      <p class="h1 home-intro-para"><b> CanBeDone.com  -  Where ideas come to life  </b></p>
+    </div>
+
+    <div class="home-intro-video-container">
+      <iframe allowfullscreen src="http://www.youtube.com/embed/dTSnnlITsVg?modestbranding=1&;showinfo=0&;autohide=1&;rel=0;" frameborder="3">
+      </iframe>
+
+      <div class="home-intro-button-container clearfix">
+        <button type="button" class="btn home-intro-button btn-success"> <b>Add idea</b> </button>
+        <button type="button" class="btn home-intro-button pull-right btn-success"> <b> Teams that need <i> you </i>  </b> </button>
+      </div>
+
+      <div class="home-intro-search">
+        <form >
+          <div class="input-group clearfix">
+            <input type="text" placeholder="Search..." class="form-control home-intro-search-text" ng-model="query">
+            <div class="input-group-btn">
+              <button class="btn btn-info" ng-click="redirectToBrowse(query)">
+                <span class="glyphicon glyphicon-search"> </span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- home-intro-body -->
+  <div class="common-popular-idea-container">
+    <div class="common-popular-idea">
+      <div class="popular-idea-par-container">
+        <h3 class="popular-par"> <b> Popular ideas </b>  </h3>
+      </div>
+
+      <!-- popular-par-container -->
+      <div class="popular-idea-tab-container">
+        <idea-viewer size="4" idea-model="popularIdeas"> </idea-viewer>
+      </div>
+    </div>
+
+    <div class="popular-idea-more-para-container">
+      <div class="idea-more-para"> <a href="#"> ...more </a>  </div>
+
+    </div>
+  </div>
+
+
+
+<!-- common-popular-idea -->
+  <div class="home-idea-area-container">
+    <div class="home-idea-area">
+      <div class="home-idea-area-par-container">
+        <h3 class="popular-par"> <b> Ideas from Trondheim  </b>  </h3>
+      </div>
+
+      <!-- popular-par-container -->
+      <div class="home-idea-area-tab-container">
+        <idea-viewer size="4" idea-model="popularIdeas">
+        </idea-viewer>
+      </div>
+
+      <!-- tab-content -->
+      <div class="home-idea-area-more-para-container">
+        <div class="idea-more-para"> <a href="#"> ...more </a> </div>
+      </div>   
+    </div>
+  </div>
+
+
+<!-- home-idea-area -->
+  <div class="home-find-teams-container">
+    <div class="home-find-teams">
+      <div class="home-find-teams-para-container">
+        <h3 class="popular-par">
+          <b> Click to find teams that need your strengths </b>
+          <br>
+        </h3>
+      </div>
+
+      <div class="home-find-teams-row-container">
+        <div class="row first-row-icons-home-page">
+          <div class="col-lg-1 col-md-1 col-xs-1"> </div>
+          <div class="col-lg-2 col-md-2 col-xs-2">
+            <div class="home-find-team-icon">
+              <a href> <span class="fa fa-picture-o home-glyp-cam"> </span> </a>
+              <div class="find-team-caption">
+                <p class="find-team-caption-para"> Design </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-2">
+            <div class="home-find-team-icon">
+              <a href> <span class="fa fa-bullhorn home-glyp-cam"> </span> </a>
+              <div class="find-team-caption">
+                <p class="find-team-caption-para"> Marketing </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-2">
+            <div class="home-find-team-icon">
+              <a href> <span class="fa fa-keyboard-o home-glyp-cam"> </span> </a>
+              <div class="find-team-caption">
+                <p class="find-team-caption-para"> Software  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-2">
+            <div class="home-find-team-icon">
+              <a href> <span class="fa fa-laptop home-glyp-cam"> </span> </a>
+              <div class="find-team-caption">
+                <p class="find-team-caption-para"> Web </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-2">
+            <div class="home-find-team-icon">
+              <a href><span class="fa fa-mobile home-glyp-cam"> </span> </a>
+              <div class="find-team-caption">
+                <p class="find-team-caption-para"> Mobile </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row second-row-icons-home-page">
+
+          <div class="col-lg-1 col-md-1 col-xs-1">
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-2">
+            <div class="home-find-team-icon">
+              <a href> <span class="fa fa-suitcase home-glyp-cam"> </span> </a>
+              <div class="find-team-caption">
+                <p class="find-team-caption-para">  Business </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-2">
+            <div class="home-find-team-icon">
+              <a href> <span class="fa fa-film home-glyp-cam"> </span> </a>
+              <div class="find-team-caption">
+                <p class="find-team-caption-para"> Film </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-2">
+            <div class="home-find-team-icon">
+              <a href> <span class="fa fa-gear home-glyp-cam"> </span> </a>
+              <div class="find-team-caption">
+                <p class="find-team-caption-para"> Engineering </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-2">
+            <div class="home-find-team-icon">
+              <a href> <span class="fa fa-male home-glyp-cam"> </span> </a>
+              <div class="find-team-caption">
+                <p class="find-team-caption-para"> Humanities </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-2">
+            <div class="home-find-team-icon">
+              <a href> <span class="fa fa-rocket home-glyp-cam"> </span> </a>
+              <div class="find-team-caption"> </div>
+                <p class="find-team-caption-para"> Entrepenourship </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="idea-more-para">
+          <a href="#">  ...more </a>
+        </div>
+      </div>
+      
+    </div>
+  </div>

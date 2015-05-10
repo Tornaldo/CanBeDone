@@ -1,0 +1,16 @@
+
+// =========================================================
+//		Base
+// =========================================================
+
+/*	In the base we'll style the base properties
+**	NB: NOT classes, ids etc. !!
+*/
+
+body {
+  background: palette(white);  
+  background: #f3f6f6;
+  z-index: -1;
+  min-height: 100%;
+}
+

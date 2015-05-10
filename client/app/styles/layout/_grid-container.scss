@@ -1,0 +1,19 @@
+// =========================================================
+//		GRID CONTAINER
+// =========================================================
+
+.grid {
+	@extend %clearfix;
+	@extend .centered !optional; //TODO remove optional
+	width: 90%;
+
+	// Make nested grid 100%;
+	[class*="grid__col--"] > & {
+		width: 100%;
+	}
+
+	//Set a max width to grid container.
+	@include mq(large) {
+		width: 1050px;
+	}
+}

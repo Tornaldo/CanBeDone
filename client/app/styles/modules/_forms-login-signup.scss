@@ -1,0 +1,38 @@
+.login-control {
+	background: white;
+	margin: 0px auto;
+	width: 500px;
+	margin-top: 70px;
+	padding: 0px 0px 10px 20px;
+	box-shadow: 1px 1px lightgrey;
+}
+
+a.btn.btn-large.btn-block.btn-fb {
+	box-shadow: 1px 1px rgb(138, 138, 245);
+	background-color: #3a5795;
+	color: white;
+	border-bottom: 1px solid #C3C4C7;
+}
+
+
+a.btn.btn-large.btn-singup {
+	background: rgb(92, 184, 92);
+	color: white;
+	box-shadow: 1px 1px white;
+	margin-top: 5px;
+}
+
+a.btn.btn-large.btn-block.btn-google {
+	background-color: #d14836;
+	color: white;
+	border-bottom: 1px solid #C3C4C7;
+}
+
+.pair-group > input {
+	margin-bottom: 5px;
+}
+
+button.btn.btn-large.btn-blue.btn-block.btn-signin {
+	background: rgb(92, 184, 92);
+	color: white;
+}

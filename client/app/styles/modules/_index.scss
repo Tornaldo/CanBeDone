@@ -1,0 +1,22 @@
+// =========================================================
+//		MODULES 
+// =========================================================
+
+/*		Index
+**	This is a manifest file to reference the other files in the directory.
+*/	
+@import "extends";
+
+@import "navbar";
+
+@import "comment";
+
+@import "user-profile";
+
+@import "front";
+
+@import "idea-profile";
+
+@import "forms-login-signup";
+
+@import "idea-add";

@@ -2,7 +2,7 @@ node_modules
 dist
 .tmp
 .sass-cache
-app/bower_components
-app/app.js
+bower_components
+config
+app/config/config.js
 .idea/
-.DS_Store

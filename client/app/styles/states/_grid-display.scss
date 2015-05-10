@@ -1,0 +1,20 @@
+// =========================================================
+//		GRID DISPLAY
+// =========================================================
+
+
+.is-displayed-mobile {
+	@include mq(small) {
+		display: block;
+
+		@at-root (with: media) { //Jumps put to root, but stayes within media query.
+			.is-hidden-mobile {
+				display: none;
+			}
+		}
+	}
+	@include mq(medium) {
+		display: none;
+	}
+}
+

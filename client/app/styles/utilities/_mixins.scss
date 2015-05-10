@@ -1,0 +1,89 @@
+// =========================================================
+//		Mixins
+// =========================================================
+
+
+/*		BEM selector - Element
+**	Used to make the code more readable when getting
+**	the element in the base
+*/
+@mixin e($element) {
+	&__#{$element} {
+		@content;
+	}
+}
+
+/*		BEM selector - Module
+**	Used to make the code more readable when getting
+**	the modifier from base or element.
+*/
+@mixin m($modifier) {
+	&--#{$modifier} {
+		@content;
+	}
+}
+
+
+/*		Media Query
+**	Simple mixin that uses the given Media-Query. This
+**	mixin should be included instead of defining new MQs.
+*/
+@mixin mq($break) {
+	@if $break == "small" {
+		@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+			@content;
+		}
+	}
+	@else if $break == "medium" {
+		@media (min-width: $breakpoint-md+1) and (max-width: $breakpoint-lg) {
+			@content;
+		}
+	}
+	@else if $break == "large" {
+		@media (min-width: $breakpoint-lg+1) {
+			@content;
+		}
+	}
+	@else {
+		@error "Error! No value could be retrieved for #{$break}"
+	}
+}
+
+
+/*		UI theme colors
+**	lorem lipsum
+*/
+@mixin bg-colors($map) {
+	@each $theme, $color in $map {
+		&--#{$theme} {
+			background-color: $color;    
+		}
+	}
+}
+
+
+/*		Adjust sibling margins
+**	
+*/
+@mixin doubly($margin: 1em) {
+	& + & {
+		margin-left: $margin;
+		@content;
+	}
+} 
+
+
+// Grid columns
+
+@mixin g-columns {
+	@for $i from 1 through $g-col-count {
+		
+		$context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+		$target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+
+		//generate column modifier class
+		&--#{$i} {
+			width: percentage($target / $context);
+		}
+	}
+}

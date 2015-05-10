@@ -1,0 +1,174 @@
+<div class="addIdea">
+
+    <!--<div class="">
+        <h1 align="center">Describe your idea!</h1>
+    </div>-->
+    <form name="form" class="add-idea-form-container" novalidate valid-submit="submit()" >
+            
+            <div class="security-panel" ng-if="false">
+                <div class="row security-panel-container">
+                    
+                    <security-panel model="idea"></security-panel>
+                </div>
+            </div>
+       
+            <div class="purpose-questionaire">
+                <div ng-controller="questionaireCtrl">                
+                    <div class="row purpose-questionaire-container"> 
+                        <h3 class="add-idea-section-header">Questionnaire</h3>
+
+                        <div ng-repeat="q in purposeQuestionaire">
+                            <question-multiple ng-if="q.type =='checkbox'" text="{{q.question}}" answer="idea" alternatives="q.alternatives">
+                            </question-multiple>
+                            <question-single ng-if="q.type =='radio'" group="{{q.name}}" text="{{q.question}}" answer="idea" alternatives="q.alternatives">
+                            </question-single>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="add-idea-input-form">
+                <div class="row add-idea-input-form-container">
+                    <h3 class="add-idea-section-header"> Idea form</h3>
+                            
+                    <div class="">  
+                        <div class="col-lg-5 add-idea-input-form-inner">
+                            <div control-group label="" validate>
+                                <input 
+                                type="text" 
+                                class="form-control" 
+                                id="title" 
+                                name="title" 
+                                placeholder="Enter title" 
+                                ng-model="idea.title" 
+                                required />
+                                <span style="color:red" class="help-inline" ng-show="form.title.$error.required && form.$submitted">This input is required</span>
+                            </div>
+
+                            <div control-group label="">
+                                <textarea 
+                                type="text" 
+                                class="form-control" 
+                                id="what" 
+                                name="what" 
+                                placeholder="Summarize what your idea is in 160 characters or less." 
+                                ng-model="idea.shortDescriptionWhat"
+                                ng-maxlength="160" 
+                                required> 
+                                </textarea>
+                                <span class="help-inline" ng-show="form.what.$error.required && form.$submitted">This input is required</span>
+                                <span class="help-inline"
+                                ng-show="form.what.$error.maxlength">Max 160 characters! Short and sweet</span>
+                            </div>
+
+                            <div control-group label="">
+                                <textarea 
+                                type="text" 
+                                class="form-control" 
+                                id="why" 
+                                name="why" 
+                                placeholder="Summarize in 160 characters or less what the point of the idea is. What good will it do?" 
+                                ng-model="idea.shortDescriptionWhy" 
+                                ng-maxlength="160">
+                                </textarea>
+                                <span class="help-inline" ng-show="form.why.$error.required && form.$submitted">This input is required</span>
+                                <span class="help-inline"
+                                ng-show="form.why.$error.maxlength">Max 160 characters! Short and sweet</span>
+                            </div>
+                        
+                            <div ng-controller="uploaderCtrl" class="idea-form-drop-zone" >
+                            <!--uploader use legazy mode if not html5-->
+                               <div ng-show="uploader.isHTML5">
+                                        <div nv-file-drop="" uploader="uploader">
+                                        <div nv-file-over="" uploader="uploader" over-class="another-file-over-class" class=" my-drop-zone">
+                                          <!--  Another drop zone with its own settings-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<div class="fileUpload btn btn-default">
+                                    <span>Image Upload</span>
+                                    <input type="file" class="upload" nv-file-select uploader="
+                                    uploader">
+                                </div>
+                                <ul>
+                                    <li ng-repeat="item in uploader.queue">
+                                        <strong><span ng-bind="item.file.name"></span></strong><br/>
+                                         <div ng-show="uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                                        <button ng-click="item.upload()">upload</button>
+                                    </li>
+                                </ul>-->
+                            </div> 
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="pull-left">
+                                <div class="thumbnail-containter-idea" ng-controller="IdeaThumbCtrl">
+                                    <div class="thumbnail-modified-ideas clearfix ">
+                                        <div class="image-inside-thumb-container-ideas">
+                                           <div ng-show="imageCropResult">
+                                             <img ng-src="{{ imageCropResult }}" alt="The Cropped Image">
+                                             
+                                           </div>  
+                                        </div>
+                                        <div class="caption-modified-ideas clearfix">
+                                            <h5 class="thumbnail-modified-title"><b>{{idea.title}}</b></h5>
+                                            <h5 class="thumbnail-modified-desc">{{idea.shortDescriptionWhat}}</h5>
+
+                                            <div class="glyp-thumb-modified">
+                                                <div class="profile-image-inside-thumb-container">
+                                                    <img src="img/SolarCell.jpg" class="image-responsive profile-image-in-thumbnail"
+                                                         alt="Profile icon">
+                                                </div>
+                                                <p class="by-name-text">from Elon</p>
+                                            </div>
+                                        </div>            
+                                    </div>                        
+                                </div>  
+                            </div>
+                            <div class="pull-right">
+                               <div ng-hide="imageCropResult">
+                                   <image-crop
+                                     data-width="220"
+                                     data-height="145"
+                                     data-shape="square"
+                                     data-step="imageCropStep"
+                                     data-result="imageCropResult"
+                                     data-original ="idea.imageFile"
+                                     ng-show="showImageCropper"
+                                   ></image-crop>
+                                </div>
+                                                               
+                            </div>
+             
+                        </div>
+                    </div>   
+                </div> 
+            </div>
+
+            
+        
+            <div class="idea-editor-summer-note">
+                <div class="row idea-editor-summer-note-container">
+                <h3 class="add-idea-section-header">Idea description</h3>
+                    
+                    <div class="form-group">
+                        <editor content="idea.description"></editor>
+                    </div>
+
+                </div>
+            </div>    
+
+            <div class="idea-form-category-picker">
+                <div class="row idea-form-category-picker-container">
+                <h3 class="add-idea-section-header">Categorize</h3>
+
+                    <category-picker result="idea.categoryIds" on-main="getMain()" on-subcategory="getSubcategory(cid)" key="'categories'"></category-picker>
+                <input type="submit"  class="btn btn-primary btn-lg pull-right idea-form-post-idea" value="Post idea"/>
+                </div>
+            </div>
+    </form>
+</div> 
+
+<!--<br><br>
+<pre>
+    {{idea}}
+</pre>-->

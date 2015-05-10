@@ -1,0 +1,34 @@
+// =========================================================
+//		Functions
+// =========================================================
+
+
+//import if font URL is defined
+@if variable-exists(font-url--google) {
+	@import url($font-url--google);
+}
+
+
+/*		Calculate pixels to em
+**
+**	target: wanted size in pixels
+**	context: the base size for the element
+*/
+@function em($target, $context: $base__font-size) {
+	@return ($target / $context) * 1em;
+}
+
+/*		A more convenient way of retrieving color-shades from the maps.
+**
+**	palette: the color in $palettes you want
+**	shade: the shade of that color you want returned.
+*/
+@function palette($palette, $shade: "base") {
+	@return map-get(map-get($palettes, $palette), $shade);
+}
+
+
+@function g-context($g-col-width, $g-col-count, $g-gutter-width) {
+	$g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
+	@return $g-context;
+}

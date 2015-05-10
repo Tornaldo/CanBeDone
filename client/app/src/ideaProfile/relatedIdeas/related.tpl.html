@@ -1,0 +1,16 @@
+ <div class="other-ideas-container">
+        <ul class="side-nav-right col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+            <li ng-repeat="idea in content track by $index" class="side-nav-right-idea-container clearfix">
+                <div class="sid-nav-right-image col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="image-inside-thumb-container-other-ideas">
+                            <img ng-src="img/BreadProduction.jpg" alt="Related Idea Image" class="image-inside-other-ideas-element">
+                        </div>
+                    </div>
+                    <div class="sid-nav-right-title col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                        <p class="other-ideas-text">{{idea.title}}</p>
+                        <p class="other-ideas-text">{{idea.shortDescriptionWhat}}</p>
+                        <small ng-if="idea.user">By: <a href="">{{idea.user}}</a></small> <!-- Redirect to user page when implemented-->
+                    </div>
+            </li>
+        </ul>
+    </div>

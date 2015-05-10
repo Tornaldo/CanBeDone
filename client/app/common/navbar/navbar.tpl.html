@@ -1,0 +1,140 @@
+
+
+<nav class="navbar navbar-fixed-top" role="navigation" ng-controller="headerCtrl">  
+    <div class="common-header clearfix">
+        <div class="header-container clearfix col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 navbar-left-box-container">
+              <div class="navbar-toggle-nav-container pull-left">
+                <a  class="navbar-toggle-nav pull-left" type="button" ng-click="toggeSidebar()" >
+                      <div class="pull-left">
+                          <span class="icon-bar-nav"></span>
+                          <span class="icon-bar-nav"></span>
+                          <span class="icon-bar-nav"></span>
+                      </div>
+                      <!--<div class="pull-right">
+                          <span class="fa fa-caret-down pull-right"></span>
+                      </div>-->
+                </a>    
+              </div>
+              <div class="pull-right">
+                 <a class="navbar-toggle-nav-img" href="#"> <img src="common/navbar/rocket.jpg"> </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 navbar-header-li-container">
+              <div class="input-group">
+                <div class="input-group-btn search-panel">
+                  <button type="button" class="btn btn-drop dropdown-toggle clickme" id="clickme" >
+                    <span class="fa fa-caret-down" id="search_concept"></span>
+                  </button>
+              
+                  <div class="dropdown">
+                      <ul class="dropdown-menu dropdown-menu-search" role="menu" id="drop">
+                        <li class="clickme"><a href="#"><i class="fa fa-star-o"></i>&nbsp;Recommended for you</a></li>
+                        <li class="clickme"><a href="#"><i class="fa fa-fire"></i>&nbsp;Popular ideas</a></li>
+                        <li class="clickme"><a href="#"><i class="fa fa-bullseye"></i>&nbsp;Ideas from your area</a></li>
+                        <li class="clickme"><a href="#"><i class="fa fa-flag"></i>&nbsp;Ideas from your country link</a></li>
+                        <li class="clickme"><a href="#"><i class="fa fa-clock-o"></i>&nbsp;New ideas</a></li>
+                      </ul>
+                  </div>
+                </div><!-- /btn-group -->
+                <input type="text" ng-model="searchfromnav" class="form-control navbar-search-box-font" placeholder="Search for ideas...">
+                <div class="input-group-btn" >
+                  <button type="button" class="btn btn-drop dropdown-toggle" data-toggle="dropdown" ng-click="searchForIdeasNav(searchfromnav)">
+                      <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </div><!-- /btn-group -->
+              </div><!-- /input-group -->
+
+              <script>        
+                $( ".clickme" ).click(function() {
+                    if ( $( "#drop" ).is( ":hidden" ) ) {
+                      $( "#drop" ).slideDown( 400);
+                    } else {
+                      $( "#drop" ).hide();
+                    }
+                  })
+
+                    $('.input-group-btn .dropdown-menu').find('a').click(function(e) {
+                        e.preventDefault();
+                        var param = $(this).attr("href").replace("#","");
+                        var concept = $(this).text();
+                        $('.search-panel span#search_concept').text(concept);
+                        $('.input-group #search_param').val(param);
+                    });
+              </script>
+
+                <!--<ul class="nav navbar-nav navbar-header-li-ul clearfix">
+                    <li>
+                        <a class="navbar-brand" href="#">IDEA</a>
+                    </li>
+                    <li ng-class="{ active: isActive('/browse') }">
+                        <a href="#/browse">Browse ideas</a>
+                    </li>
+                    <li ng-class="{ active: isActive('/addIdea') }">
+                        <a href="#/post-idea">Add idea </a>
+                    </li>
+                    <li>
+                        <a href="#/login">Register/Login</a>
+                    </li>
+                </ul>-->
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 navigator-right-box-container">     
+
+
+                <ul class="navbar-header-li-ul list-inline clearfix">
+                  <!--  <li>
+                        <a class="navbar-brand" href="#">IDEA</a>
+                    </li>
+                    <li ng-class="{ active: isActive('/browse') }">
+                        <a href="#/browse">Browse</a>
+                    </li>-->
+                   <!-- <li ng-class="{ active: isActive('/addIdea') }">
+                        <a href="#/post-idea">Add idea </a>
+                    </li>-->
+                    <li ng-class="{ active: isActive('/addIdea') }">
+                        <a href="#/post-idea" role="button" class="btn btn-info btn-post btn-success" data-toggle="modal"><i class="fa fa-plus"></i> Add idea</a>
+                    </li>
+                    <!--<li>
+                        <a href="#/login">Register/Login</a>
+                   
+                    </li>-->
+                    <li class="nav-flag">
+                        <i class="fa fa-flag"></i>
+                    </li>
+                    <li class="nav-envelope">
+                       <i class="fa fa-envelope"></i> 
+                    </li>
+                    <li class="dropdown dropdown-reg" data-toggle="dropdown">
+                        <a href="#" class="dropdown-toggle" ><i class="glyphicon glyphicon-user"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-account">
+                          <li><a href="#/login">Register/Login</a></li>
+                          <li><a href="#/userprofile">Profile</a></li>
+                          <li><a href="">More</a></li>
+                          <li><a href="">More</a></li>
+                          <li><a href="">More</a></li>
+                        </ul>
+                      </li>
+                </ul>                    
+            </div>                
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+    $('.search-panel .dropdown-menu').find('a').click(function(e) {
+        e.preventDefault();
+        var param = $(this).attr("href").replace("#","");
+        var concept = $(this).text();
+        $('.search-panel span#search_concept').text(concept);
+        $('.input-group #search_param').val(param);
+    });
+</script>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div ng-if="sidebar" class="collapse navbar-collapse navbar-ex1-collapse">
+        <leftside-navigation></leftside-navigation> 
+    </div>
+    <!-- /.navbar-collapse -->
+    <!-- /.navbar-collapse -->
+</nav>
+
+<br>

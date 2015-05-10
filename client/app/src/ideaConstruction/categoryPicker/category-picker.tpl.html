@@ -1,0 +1,22 @@
+<div class="add-idea-category-picker">
+	<div class="main-category" ng-repeat="category in main">
+		<label>
+			<input 	type="checkbox" 
+					ng-change="getSubcategory(category, cb)"
+					ng-model="cb" />
+			{{category.name}}
+		</label>
+	</div>
+	<div class="sub-category" ng-repeat="category in ordered">
+		<p ng-if="category.data.category.subCategories.length >0">Subcategories of {{category.data.category.name}}</p>
+		
+		<div ng-repeat="s in category.data.category.subCategories">
+			<label>
+				<input 	type="checkbox" 
+						ng-change="getSubcategory(s, cb)"
+						ng-model="cb" />
+			{{s.name}}
+			</label>
+		</div>
+	</div>
+</div>

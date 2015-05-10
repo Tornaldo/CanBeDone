@@ -1,0 +1,13 @@
+<div ng-show="!$parent.editorOn" class="idea-profile-description">
+<div id="description" ng-bind-html="content"></div>
+<a class="btn-idea-editor" ng-click="$parent.editorOn=true"> <i class="fa fa-pencil-square-o"></i> </a>
+</div>
+<div ng-show="$parent.editorOn" class="idea-profile-description">
+    <p>
+        <textarea ng-model="content" type="text" class="form-control form-control-edit" id="what" name="what" > </textarea>  
+        <p>
+            <a  ng-click="save()"><i class="fa fa-floppy-o"></i></a> or
+            <a  ng-click="cancel()"><i class="fa fa-times"></i></a>
+        </p>
+    </p>
+</div>

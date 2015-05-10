@@ -1,0 +1,44 @@
+// =========================================================
+//		Helpers
+// =========================================================
+
+
+/*		Screen Reader Text
+**
+**	add this as class tag when you want the information hidden just for SRTs.
+**	Eg. When you have an image with text or logo.
+*/
+.srt {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+
+// For pseudo-elements
+%pseudos {
+  display: block;
+  content: ''; 
+  position: absolute;
+}
+
+
+// Clearfix
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.centered-h {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+

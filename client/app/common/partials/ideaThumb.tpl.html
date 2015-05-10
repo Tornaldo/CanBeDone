@@ -1,0 +1,22 @@
+<div class="thumbnail-containter-idea" ng-controller="IdeaThumbCtrl" ng-click="redirectToIdea(idea.id)">
+    <div class="thumbnail-modified-ideas clearfix ">
+        <div class="image-inside-thumb-container-ideas">
+            <img src="img/SolarCell.jpg"
+                 class="img-responsive" alt="My Image">
+        </div>
+        <div class="caption-modified-ideas clearfix">
+            <h5 class="thumbnail-modified-title"><b>{{idea.title | cut:true:50:' ...' }}</b></h5>
+            <h5 class="thumbnail-modified-desc">{{idea.shortDescriptionWhat | cut:true:120:' ...'}}</h5>
+
+            <div class="glyp-thumb-modified">
+                <div class="profile-image-inside-thumb-container">
+                    <img src="img/SolarCell.jpg" class="image-responsive profile-image-in-thumbnail"
+                         alt="Profile icon">
+                </div>
+                <p class="by-name-text">from Elon</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+

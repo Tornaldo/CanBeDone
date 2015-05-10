@@ -1,0 +1,10 @@
+<div class="row team-box" ng-if="idea.independentImplementation !== 'no'"> <!--team box temp-->
+	<div class="col-md-12" style="padding:20px; text-align: middle">
+		<p ng-if="nrProject <= 0">No projects created for this idea. Be the first!</p>
+		<p ng-if="nrProject >0">No projects that suits you? Create a new project yourself!</p>
+		<a class="btn btn-primary" ng-href="#/idea/{{idea.id}}/create-project" ng-if="idea.independentImplementation === 'yes'">Start your own project</a>
+		<a class="btn btn-primary" ng-href="alert('TODO: send alert')" ng-if="idea.independentImplementation === 'talkToMe'">Send request to idea owner</a>
+		<!-- Permission sent etc TODO-->
+	</div>
+</div>
+<hr ng-if="idea.independentImplementation !== 'no'">

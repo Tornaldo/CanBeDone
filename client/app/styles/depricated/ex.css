@@ -1,0 +1,682 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.common-header-home {
+background:#fff;
+color:#000;
+box-shadow:-2px 1px 1px #505050;
+z-index:50;
+}
+
+.navbar-header-home>
+li:hover {
+background-color:#121212;
+}
+
+.navbar-header-home>
+li>
+a {
+font-size:120%;
+font-style:bold;
+}
+
+.icon-bar {
+background:#FFF;
+}
+
+.nav-tabs {
+border-bottom:0 solid #ddd;
+margin-left:0;
+padding-left:0;
+}
+
+.nav-tabs>
+li {
+float:left;
+margin-bottom:0;
+padding-right:60px;
+text-decoration:none;
+list-style-type:none;
+}
+
+.nav-tabs>
+li>
+a {
+line-height:1.428571429;
+border:0 solid transparent;
+border-radius:0;
+}
+
+.nav-tabs>
+li.active>
+a,.nav-tabs>
+li.active>
+a:hover,.nav-tabs>
+li.active>
+a:focus {
+color:#000;
+background:#FFF;
+border:0 solid #000;
+border-bottom:0 solid #000;
+cursor:default;
+}
+
+.nav-tabs>
+li>
+a:hover {
+background:#FFF;
+border-bottom:1px solid #000;
+padding-bottom:0;
+border-color:#eee #eee #ddd;
+}
+
+
+
+.carousle-modified {
+margin-left:auto;
+margin-right:auto;
+width:801px;
+}
+
+
+
+
+
+
+
+
+
+
+.image-inside-ideas-element {
+border:0 none #898989;
+border-radius:4px 4px 0 0;
+outline:#898989 none 0;
+height:auto;
+margin:-71px -75px -71px -71px;
+padding:0;
+}
+
+
+
+
+
+
+
+
+
+.caption-modified h5 {
+font-size:14px;
+font-family:default;
+}
+
+
+
+
+
+
+
+.thumbnail-text-what {
+margin-bottom:0;
+}
+
+
+.common-footer-container {
+background:#232e35;
+box-shadow:-2px 1px 1px gray;
+}
+
+footer ul.breadcrumb {
+background:#000;
+display:table;
+-webkit-border-radius:0;
+-moz-border-radius:0;
+border-radius:0;
+margin:0 auto;
+}
+
+footer ul.breadcrumb li {
+text-shadow:none;
+}
+
+footer ul.breadcrumb li a {
+color:#FFF;
+background:#000;
+}
+
+.common-footer {
+background:#000;
+display:table;
+margin:0 auto;
+}
+
+
+
+.popular-idea-tab-nav {
+font-size:11px;
+padding-bottom:10px;
+display:table;
+width:744px;
+margin:0 auto;
+}
+
+.popular-ideas-category {
+display:inline;
+margin-right:30px;
+color:#4b4b4b;
+}
+
+.popular-ideas-category-first {
+margin-left:15px;
+}
+
+.popular-ideas-category a {
+color:#4b4b4b;
+}
+
+.popular-ideas-category a:hover {
+text-decoration:none;
+color:#000;
+}
+
+
+
+
+
+
+
+
+.home-idea-area-tab-nav {
+background:#f3f6f6;
+display:table;
+width:1046px;
+padding-bottom:10px;
+margin:0 auto;
+}
+
+.hom-idea-area-tab-nav>
+ul>
+li {
+width:500px;
+padding-left:100px;
+}
+
+
+
+
+
+.home-idea-name-container {
+box-shadow:1px 1px 1px #d8d8d8 inset;
+}
+
+.home-idea-name-para {
+display:inline-block;
+margin:0 auto;
+}
+
+.home-idea-name-carousel-caption-title {
+position:absolute;
+left:15%;
+right:15%;
+top:5px;
+z-index:80;
+padding-top:10px;
+padding-bottom:20px;
+color:#fff;
+text-align:center;
+text-shadow:0 1px 2px rgba(0,0,0,0.6);
+}
+
+.home-idea-name-img {
+width:100%;
+height:300px;
+background-position:center;
+background-size:cover;
+}
+
+.home-idea-name-carousel-caption-more-para {
+position:absolute;
+bottom:5px;
+right:10px;
+padding-top:10px;
+padding-bottom:20px;
+}
+
+.carousel-control-idea-area-left {
+right:auto;
+padding-left:120px;
+}
+
+.carousel-control-idea-area-right {
+padding-right:120px;
+left:auto;
+}
+
+
+
+.image-inside-other-ideas-container {
+float:left;
+overflow:hidden;
+height:60%;
+width:100%;
+padding-top:0;
+}
+
+
+
+.image-inside-thumb-project-member {
+width:80px;
+height:80px;
+border-radius:5px;
+overflow:hidden;
+position:relative;
+}
+
+.project-page-text-from-team-leader {
+margin-top:25px;
+}
+
+
+
+.home-logged-in-welcom-user-container {
+background:#FFF;
+margin-top:20px;
+}
+
+.home-logged-in-welcom-user {
+display:table;
+width:1046px;
+padding-left:6px;
+padding-right:10px;
+margin:0 auto;
+}
+
+.home-logged-in-button-width-news {
+width:50%;
+border-radius:4px 0 0 4px;
+}
+
+.home-logged-in-button-width-notification {
+width:50%;
+border-radius:0 4px 4px 0;
+}
+
+.home-logged-in-search {
+padding-top:20px;
+padding-right:18px;
+}
+
+.home-logged-in-challenges-container {
+background:#e5e4e2;
+box-shadow:1px 1px 1px #d8d8d8 inset;
+padding-top:10px;
+padding-bottom:30px;
+}
+
+.home-logged-in-category-container {
+padding-top:10px;
+padding-bottom:30px;
+background:#FFF;
+box-shadow:1px 1px 1px #d8d8d8 inset;
+}
+
+.home-logged-in-recommended-challenges-container {
+padding-top:10px;
+background:#e5e4e2;
+box-shadow:1px 1px 1px #d8d8d8 inset;
+}
+
+.home-logged-in-recommended-challenges-content-container {
+display:table;
+width:1046px;
+margin:0 auto;
+}
+
+.multiple-teams-thumbnail-group {
+margin-bottom:20px;
+background:lightgray;
+padding-bottom:20px;
+}
+
+.multiple-teams-up-title {
+background:#f3f781;
+margin:0 20px 0 0;
+padding:0;
+}
+
+.multiple-teams-thumb-container-up-right {
+background:lightgray;
+margin-top:40px;
+margin-right:20px;
+padding-left:20px;
+padding-top:5px;
+height:257px;
+}
+
+.multiple-teams-thumbnail-group-list {
+margin-bottom:10px;
+border:1px solid lightgray;
+background:lightgray;
+}
+
+.multiple-teams-up {
+margin-top:20px;
+margin-left:20px;
+}
+
+.multiple-teams-main-up-left-more {
+bottom:20px;
+padding-right:20px;
+}
+
+.mulitple-teams-main-icon-button-join {
+margin-top:15px;
+margin-bottom:10px;
+margin-right:30px;
+}
+
+.mulitple-teams-main-icon {
+width:7%;
+background:#FFF;
+}
+
+.mulitple-teams-main-button {
+width:90%;
+}
+
+.multiple-teams-main-button-intro {
+margin-top:15px;
+margin-bottom:10px;
+margin-left:30px;
+}
+
+.col4-profile-contact {
+height:200px;
+width:300px;
+}
+
+.profile-contact-img-container {
+float:left;
+overflow:hidden;
+border:1px solid #ccc;
+border-radius:5px 5px 0 0;
+padding-top:0;
+margin-bottom:20px;
+height:100%;
+width:100%;
+}
+
+.profile-contact-img {
+color:#898989;
+border:0 none #898989;
+border-radius:4px 4px 0 0;
+font:normal normal normal 12px/18px arial,'helvetica neue',helvetica,sans-serif;
+outline:#898989 none 0;
+margin:-100px -105px -100px -100px;
+padding:0;
+}
+
+.profile-contact-btn-width {
+border-radius:0;
+margin-top:15px;
+}
+
+.profile-contact-thumb-name,.profile-contact-thumb-txt,.profile-contact-thumb-comp,.profile-recommend-thumb-recom,.profile-idea-teams-thumb-idte,.profile-favorite-thumb-favoid {
+margin-bottom:20px;
+border-radius:0;
+text-align:center;
+box-shadow:0 0 1px 1px #e6e0f8;
+}
+
+.profile-recommend-thumb-recom {
+height:300px;
+}
+
+.profile-idea-teams-thumb-idte,.profile-favorite-thumb-favoid {
+height:400px;
+}
+
+.profile-contact-thumb-txt,.profile-contact-thumb-comp {
+height:232px;
+}
+
+.project-profile-navigator-box {
+background:#ecf8e0;
+height:default;
+width:188px;
+margin-left:50px;
+margin-top:15px;
+border:default;
+position:fixed;
+padding-top:0;
+}
+
+.project-profile-members {
+background:default;
+margin-top:20px;
+}
+
+.project-page-logged-in-title-par {
+padding-bottom:15px;
+}
+
+.project-page-logged-in-main-left-thumbnail-group {
+margin-bottom:20px;
+background:#ADD8E6;
+}
+
+.project-page-logged-in-thumbnail-forum {
+box-shadow:0 0 1px 1px #e6e0f8;
+height:200px;
+}
+
+.project-page-logged-in-main-right-team-leader-post-thumbnail {
+margin-bottom:40px;
+height:100px;
+box-shadow:0 0 1px 1px #e6e0f8;
+}
+
+.project-page-logged-in-main-right-user-post-thumbnail {
+height:1000px;
+box-shadow:0 0 1px 1px #e6e0f8;
+}
+
+.project-member-box {
+height:80px;
+}
+
+.project-member-box-profile-btn {
+margin-right:1%;
+font-size:90%;
+height:24px;
+}
+
+.project-member-box-message-btn {
+margin-left:1%;
+font-size:90%;
+height:24px;
+}
+
+.search-bar {
+padding:15px;
+}
+
+.body-search-main {
+margin-top:40px;
+margin-bottom:20px;
+}
+
+.panel-heading .panel-toggle:after {
+font-family:'Glyphicons Halflings';
+content:"\e114";
+float:right;
+}
+
+.panel-heading .panel-toggle.collapsed:after {
+content:"\e080";
+}
+
+.search-main-right-idea-row {
+margin-bottom:20px;
+}
+
+.search-main-right-thumbnail {
+border-radius:4px;
+display:block;
+margin:0;
+padding:0;
+}
+
+.search-main-right-thumbnail:hover {
+box-shadow:0 0 2px 2px #e6e0f8;
+}
+
+.search-main-right-glyph-user,.search-main-right-glyph-thumbs-up,.search-main-right-glyph-globe {
+color:gray;
+zoom:.9;
+-moz-transform:scale(2);
+}
+
+.search-main-right-img {
+display:table;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+margin:0;
+padding:0;
+}
+
+.search-main-right-glyp-size {
+font-size:12px;
+margin:0;
+padding:0;
+}
+
+
+				.navbar-header-li-ul,.header-container-home,.home-intro-para-container,.popular-idea-par-container,.home-find-teams-para-container,.home-logged-in-related-area-par-container,.home-logged-in-challenges-par-container,.home-logged-in-category-par-container,.home-logged-in-recommended-challenges-par-container,.home-logged-in-recommended-challenges-more-para-container,.search-more {
+					display:table;
+					margin:0 auto;
+				}
+
+.side-nav-left>
+ul>
+li.side-nav-top>
+a:hover,.side-nav-left>
+ul>
+li.side-nav-top>
+a:active,.side-nav-left>
+ul>
+li.side-nav-top>
+a:focus,.side-nav-left>
+ul>
+li.side-nav-categories-popular>
+a:hover,.side-nav-left>
+ul>
+li.side-nav-categories-popular>
+a:active,.side-nav-left>
+ul>
+li.side-nav-categories-popular>
+a:focus,.dropdown-menu-mod>
+.dropdown-submenu2:hover,.dropdown-menu-mod>
+.dropdown-submenu2:active,.dropdown-menu-mod>
+.dropdown-submenu2:focus,.side-nav-left>
+li.dropdown1>
+ul.dropdown-menu1>
+li>
+a:hover,.side-nav-left>
+li.dropdown1>
+ul.dropdown-menu1>
+li>
+a:active,.side-nav-left>
+li.dropdown1>
+ul.dropdown-menu1>
+li>
+a:focus {
+color:#FFF;
+background-color:#080808;
+}
+
+li.dropdown-submenu2>
+a:hover,ul.dropdown-menu-mod1>
+.dropdown-menu-mod1-li>
+a:hover {
+background-color:#080808;
+color:#FFF;
+}
+
+.dropdown-submenu2:hover>
+.dropdown-menu,.idea-profile-title-container {
+display:table;
+}
+
+.sid-nav-right-image,.home-idea-area-tab-nav-li-edges {
+padding:0;
+}
+
+.nav-home>
+li>
+a:hover,.nav>
+li>
+a:focus,#idea-2>
+section>
+a {
+text-decoration:none;
+}
+
+
+
+.home-logged-in-related-area-more-para-container,.home-logged-in-challenges-more-para-container,.home-logged-in-category-more-para-container {
+display:table;
+width:1046px;
+padding-right:25px;
+margin:0 auto;
+}
+
+.multiple-teams-title-container,.project-page-logged-in-title-container {
+display:table;
+margin:20px auto 0;
+}
+
+.multiple-teams-team-leader,.project-page-logged-in-main-left-team-leader {
+margin-left:2px;
+}
+
+.multiple-teams-description-main-up-left-glyph-usr,.project-page-logged-in-main-left-glyp-user {
+zoom:3;
+width:100%;
+}
+
+.profile-main-container,.profile-user-recommendation,.profile-ideas-teams,.profile-favorite-idea,.project-page-logged-in-container,.search-main-container {
+display:table;
+width:1046px;
+margin:0 auto;
+padding:15px;
+}

@@ -1,0 +1,221 @@
+.security-panel-container,.purpose-questionaire-container, .security-panel-public-restricted-container,.security-panel-requirements, .add-idea-input-form-container, .idea-editor-summer-note-container, .add-idea-input-form-container, .idea-form-category-picker-container {
+	margin-right:0px;
+	margin-left:0px;
+	width: 1070px;	
+	margin: 0px auto;
+	display: table;
+	padding-left: 20px;
+	margin-bottom: 10px;	
+}
+
+.addIdea {
+	box-shadow: 1px 1px rgb(226, 226, 226);
+	width: 100%;	
+	margin: 0 auto;
+	margin-top: 40px;
+
+}
+
+.add-idea-section-header {
+	display: table;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	font-size: 220%;
+	font-weight: bold;
+}
+
+.add-idea-form-container {
+	div {
+		ul.nav-tabs {
+			border-bottom: 0px solid black;
+			li {
+				margin-bottom: 10px;
+				background: rgb(247, 247, 247);
+				border: 3px solid white;
+
+				&:active a,  &:activea:hover, &:activea:focus {
+					border: 0px solid #ddd;
+					border-color: #FFF #FFF #FFF;
+
+				}
+
+				a, a:hover, a:focus {
+					border: 0px solid #ddd;
+					border-color: #FFF #FFF #FFF;
+					font-size: 22px;
+					border-radius: 0px;
+					font-family: serif;					
+				}
+				a:hover,  a:active{
+					border: 0px solid #ddd;
+					border-color: #FFF #FFF #FFF;
+					background: white;
+
+				}
+			}
+		}
+	}
+}
+
+.purpose-questionaire-container, .add-idea-input-form-container {
+	
+}
+
+.note-editor .note-editable {
+	height: 300px;
+}
+
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 10px;
+	input.upload {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		font-size: 20px;
+		cursor: pointer;
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+}
+
+.add-idea-input-form-inner {
+	
+	border: 1px solid rgb(229, 229, 229);
+	padding: 10px;
+	box-shadow: 1px 1px white;
+	padding-bottom: 14px;
+}
+
+
+.purpose-questionaire, .idea-editor-summer-note {
+	background: #fdfdfd;
+	box-shadow: 1px 1px 1px #d8d8d8 inset;
+	padding-bottom: 20px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);	
+}
+
+
+.security-panel-public-text, .security-panel-restricted-text {
+	padding: 0px;
+}
+
+.security-panel-public-img > img, .security-panel-restricted-img  > img {
+	width: 70px;
+}
+
+.note-editor, .note-editable {
+	width: 50%;
+	height: 300px;
+}
+
+.security-panel-public-restricted-container > div.col-md-6 {
+	padding:0px;
+}
+
+.idea-form-drop-zone {
+	margin-top:10px;
+}
+
+.idea-form-post-idea {
+	background: #5cb85c;
+	color: #ffffff;
+	box-shadow: 1px 1px 1px #888888;
+	border: 1px solid #BFD8C8;
+	margin-right: 5px;
+	border-color: #4cae4c;
+	padding: 10px 10px 1px 10px;
+	border-radius: 0px;	
+}
+
+.questionaire-list > li{
+	padding-left: 15px;
+}
+
+/* Core component styles */
+  .ng-image-crop {
+    text-align: center;
+    
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  /* Each of the 3 steps in the process are contained within sections */
+  .ng-image-crop > section {
+    background: #fff;
+    border: 1px solid rgb(203, 203, 203);
+  }
+  /* The cropping button */
+  .ng-image-crop button {
+    margin-top: 10px;
+  }
+  /* The dashed cropping guideline */
+  .ng-image-crop .cropping-guide {
+	display: block;
+	background: rgba(221, 221, 221, 0.3);
+	border: 3px dashed rgb(182, 124, 124);
+	position: absolute;
+pointer-events: none;
+  }
+  /* The circular themed cropping guideline */
+  .ng-image-crop--circle .cropping-guide {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  /* The canvas where the user positions the image via dragging and zooming */
+  .ng-image-crop .cropping-canvas {
+    background: rgba(255, 255, 255, .3);
+    margin: 0 auto;
+    cursor: move;
+  }
+  /* The overlayed draggable zoom handle in the corner of the module */
+  .ng-image-crop .zoom-handle {
+    display: block;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    background: rgba(255,255,255,0.7);
+    width: 100px;
+    height: 20px;
+    cursor: move;
+  }
+  /* The text within the zoom handle */
+  .ng-image-crop .zoom-handle > span {
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+    position: relative;
+    /*top: 32px;*/
+  }
+
+
+/*Category-picker*/
+.add-idea-category-picker {
+	label {
+		font-weight: normal;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-right: 15px;
+	}
+
+	p {
+		font-weight: bold;
+	}
+
+	.sub-category {
+		margin-top: 20px;
+		margin-bottom: 20px
+	}
+
+	.main-category, .sub-category>div {
+		display: inline;
+	}
+}

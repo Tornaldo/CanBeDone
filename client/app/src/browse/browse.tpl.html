@@ -1,0 +1,28 @@
+<div class="browse">
+    <div class="container">
+        <div class="row">
+            <!--<div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term" ng-model="search">
+
+                <div class="input-group-btn">
+                    <button class="btn btn-info" type="submit" ng-click="searchForIdeas(search)">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+            </div>-->
+
+            <div class="row">
+                <span ng-repeat="idea in results.ideas">
+
+                    <ng-include src="'/common/partials/ideaThumb.tpl.html'" style="display:inline-flex; margin: 5px"></ng-include>
+                </span>
+                
+                <!--<search-result result-model="results" search-function="" error-model="error" max-row="4" max-column ="4"></search-result>-->
+               
+            </div>
+            <div class="row">
+                <div ng-if="error">{{error}}</div>
+            </div>
+        </div>
+    </div>
+</div>

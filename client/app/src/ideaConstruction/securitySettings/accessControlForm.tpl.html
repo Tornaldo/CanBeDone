@@ -1,0 +1,68 @@
+
+
+<div class="row security-panel-public-restricted-container">
+    <h3 class="add-idea-section-header">Accessibility</h3>
+
+    <div class="col-md-6 ">
+
+        <!--<div class="row" style=" border-radius: 10px;margin: 3px "
+        ng-style="idea.access =='public' && {'background-color': '#99D6FF'}  || idea.access !='public' && {'background-color': 'white'}">-->
+        <div class="security-panel-public-container" >
+            <div class="col-md-8 security-panel-public-text">
+                <div class="radio" ng-class="{
+                'has-error': form.restrictOption.$invalid && form.$submitted,
+                'has-success': form.$submitted && form.restrictOption.$valid}">
+
+                    <input id="publicRadio" type="radio" name="restrictOption" ng-click="showOptionsForRestricted(false)" ng-required="!idea.access">
+                    <label class="control-label" for="publicRadio"> <strong>Public (recommended)</strong></label>
+                </div>
+                <p>Everyone can see your idea, increasing your chances of finding help for implementing
+                it.</p>
+                <a href="#">learn More...</a>
+
+            </div>
+
+            <div class="col-md-4 security-panel-public-img">
+                <img src="src/ideaConstruction/securitySettings/public.png">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+
+        <!--<div class="row" style=" border-radius: 10px;margin: 3px "
+        ng-style="idea.access =='restricted' && {'background-color': '#99D6FF'} || idea.access !='restricted' && {'background-color': 'white'}">-->
+        <div class="security-panel-restricted-container" >
+            <div class="col-md-8 security-panel-restricted-text">
+
+                <div class="radio" ng-class="{
+
+                'has-error': form.restrictOption.$invalid && form.$submitted,
+                'has-success': form.$submitted && form.restrictOption.$valid}">
+                    <input id="restrictedRadio" type="radio" name="restrictOption" ng-click="showOptionsForRestricted(true)">
+                    <label for="restrictedRadio" class="control-label" ><strong>Restricted</strong></label>
+                </div>
+                <p>You set rules for who can see the idea and who cannot.</p>
+                <a href="#">learn More...</a>
+
+            </div>
+
+            <div class="col-md-4 security-panel-restricted-img">
+                <img src="src/ideaConstruction/securitySettings/restricted.png">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row security-panel-requirements">
+    <div class="col-md-6 pull-right" ng-show="isRestrictedSelected">
+        <div class="row" style=" border-radius: 10px;margin: 3px ">
+            <p><strong>Requirements for being allowed to read idea:</strong></p>
+        </div>
+        <div class="row" ng-repeat="option in securityOptions" style=" border-radius: 10px;margin: 3px ">
+           <input type="checkbox" ng-model="model[option.name]">
+            <label for="check1">{{option.title}}</label>
+            <!--<span><a ng-click="option.show = !option.show">What?</a></span>
+            <p ng-show="option.show">{{option.description}}</p>-->
+            <a tooltip="{{option.description}}" tooltip-placement="right"><i class="fa fa-info"></i></a>
+        </div>
+    </div>
+</div>

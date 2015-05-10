@@ -1,0 +1,74 @@
+/*
+**
+**	VARIABLES
+**
+*/
+
+//-------------------
+//		COLORS
+//-------------------
+$palette_darkGrey: 		#333;
+$palette_grey: 			#424242;
+$palette_lightgrey:		#D3D3D3;
+$palette_primaryColor: 	#ffd900; //Yellow (to be green)
+$palette_secondaryColor:#00c7d2; //Blue
+$palette_contrastColor:	#ffd900; //Yellow
+
+
+
+//Placing
+$backgroundColor: $palette_contrastColor;
+
+$sidebarBackgroundColor: #FFF;
+$sidebarTextColor: $palette_lightgrey;
+
+//and so on...
+
+//old
+$bodyBackgroundColor: #f7f7f7;
+$commonHeaderAndOtherBackgroundColor: white;
+$commonHeaderBorderColor: #d4d4d4;
+$fontColor_1: #ffffff;
+$fontColor_2: black;
+$fontColor_3: #333;
+$fontColor_4: #7D8D7C;
+$fontColor_5: #999;
+$fontColor_6: #ffa500;
+$sideNavLeftBackgroundColor: $palette_grey;
+$thumbnailBoxShadow: rgba(0,0,0,0.117647);
+$fontColor_7: #898989;
+$fontColor_8: #000;
+$homeIdeaAreaBackgroundColor: #f3f6f6;
+$frontAreaContainerBorderColor: rgba(0,0,0,0.05);
+$fontColor_9: #444;
+$fontColor_10: #808080;
+$frontAreaContainerBackgroundColor: #fdfdfd;
+$textAndBorderShadows: #ccc;
+
+
+//-------------------
+//		Fonts
+//-------------------
+
+//fonts
+$font_0: arial;
+$font_1: helvetica neue;
+$font_2: helvetica;
+$font_3: sans-serif;
+$font_4: default;
+
+$font_color_navbar: $palette_lightgrey;
+
+//-------------------
+//		SPACING
+//-------------------
+
+
+
+//-------------------
+//		Other
+//-------------------
+
+$cornerRadius_small: 2px;
+$cornerRadius_medium: 5px;
+$cornerRadius_big: 8px;
