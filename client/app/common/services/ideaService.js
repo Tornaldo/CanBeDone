@@ -5,18 +5,16 @@ function (baseService, config, $q) {
     return {
         getPopularIdeas: function(category) {
         //wrong url. need api endpoint.
-        var url = config.apiBaseUrl + 'idea?page=1&pageSize=15';
+        var url = config.apiBaseUrl + 'idea';//?page=1&pageSize=15';
         return baseService.getResources(url);
         },
 
         getSearchResult: function(searchQuery, categoryPreference, page, pageSize) {
         //wrong url. Need api endpoint.
-        var url = config.apiBaseUrl + 'idea?'+'page='+page+'&pageSize='+ pageSize;
+          //TODO: What should happen if there is no querystring
+        var url = config.apiBaseUrl + 'search?querystring='+searchQuery;
         if(categoryPreference) {
             url += '&categoryId='+categoryPreference;
-        }
-         if(searchQuery) {
-            url += '&query='+searchQuery;
         }
         return baseService.getResources(url);
         },

@@ -17,11 +17,11 @@ angular.module('cbdFront', ['cbdCommon'])
   }])
 
 
-  .controller('FrontCtrl', 
-    ['$scope', '$routeParams', '$location', 'ideaService', 'popularIdeas', 
+  .controller('FrontCtrl',
+    ['$scope', '$routeParams', '$location', 'ideaService', 'popularIdeas',
     function ($scope,$routeParams, $location, ideaService, popularIdeas) {
 
-    $scope.popularIdeas = popularIdeas.ideas;
+    $scope.popularIdeas = popularIdeas;
     $scope.totalItems = popularIdeas.totalItems;
 
     $scope.redirectToAddIdea = function() {
@@ -39,7 +39,7 @@ angular.module('cbdFront', ['cbdCommon'])
            }, function(error) {
               $scope.status = 'unable to load ideas data' + error.message;
            });
-            
+
     };
 
 }]);

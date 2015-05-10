@@ -13,23 +13,23 @@ angular.module('cbdBrowse', ['cbdCommon'])
             console.log(categoryParam + "BROWSE");
             if(angular.isDefined(searchParam) || angular.isDefined(categoryParam)) {
               return ideaService.getSearchResult(searchParam, categoryParam, 0, 20).then(function (response) {
-                return response;
+                return response.results;
               });
             }
             else {
               return null;
             }
-            
+
           }]
         }
       })
   }])
 
-  .controller('BrowseCtrl', 
-  ['$scope', '$routeParams', '$location', '$routeParams','ideaService' ,'searchResult', 
+  .controller('BrowseCtrl',
+  ['$scope', '$routeParams', '$location', '$routeParams','ideaService' ,'searchResult',
   function ($scope,$routeParams, $location, routeParams, ideaService, searchResult) {
     $scope.error = null;
-    if(searchResult == null || searchResult.ideas.length <= 0) {
+    if(searchResult == null || searchResult.length <= 0) {
       $scope.error = 'Found no ideas matching your search criterias';
     }
     else {
@@ -61,13 +61,13 @@ angular.module('cbdBrowse', ['cbdCommon'])
     };
     $scope.count = 0;
     $scope.$on('searchNav', function (event, data) {
-      
+
       console.log('data: ' + data.searchText); // 'Data to send'
-      
+
       $scope.searchForIdeas(data.searchText);
-    });    
+    });
 
-   
 
-}]);      
+
+}]);
 
