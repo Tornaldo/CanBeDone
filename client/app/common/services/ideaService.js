@@ -5,13 +5,13 @@ function (baseService, config, $q) {
     return {
         getPopularIdeas: function(category) {
         //wrong url. need api endpoint.
-        var url = config.apiBaseUrl + 'ideas?page=1&pageSize=15';
+        var url = config.apiBaseUrl + 'idea?page=1&pageSize=15';
         return baseService.getResources(url);
         },
 
         getSearchResult: function(searchQuery, categoryPreference, page, pageSize) {
         //wrong url. Need api endpoint.
-        var url = config.apiBaseUrl + 'ideas?'+'page='+page+'&pageSize='+ pageSize;
+        var url = config.apiBaseUrl + 'idea?'+'page='+page+'&pageSize='+ pageSize;
         if(categoryPreference) {
             url += '&categoryId='+categoryPreference;
         }
@@ -22,7 +22,7 @@ function (baseService, config, $q) {
         },
 
         getIdea:  function (id) {
-        var url = config.apiBaseUrl + 'ideas/' + id;
+        var url = config.apiBaseUrl + 'idea/' + id;
         return baseService.getResources(url);
         },
 
@@ -31,7 +31,7 @@ function (baseService, config, $q) {
             //TODO: WHERE TO PLACE
             //Need to convert array into a string, because of backend
             idea.categoryIds = idea.categoryIds.toString();
-            var url = config.apiBaseUrl + 'ideas';
+            var url = config.apiBaseUrl + 'idea';
             console.log(idea)
             return baseService.postResource(url, idea);
         },
@@ -39,7 +39,7 @@ function (baseService, config, $q) {
 
         editIdea: function (idea) {
             console.log('edit: '+ idea);
-            var url = config.apiBaseUrl + 'ideas/' + 'editideas';
+            var url = config.apiBaseUrl + 'idea/' + 'editideas';
             return baseService.postResource(url, idea);
         },
 
@@ -56,11 +56,11 @@ function (baseService, config, $q) {
             console.log("test: " + comment);
             var url = config.apiBaseUrl + 'comments';
             return baseService.postResource(url, comment);
-        },           
-        
+        },
+
         postFaq: function(ideaId, faq) {
-            var url = config.apiBaseUrl + 'ideas/faqs';
-            
+            var url = config.apiBaseUrl + 'idea/faqs';
+
             //Each faq question has to be sent as its own request. Api limitation.
             //All promises gather up and the super promise will resolve when all
             //requests has been resolved.
@@ -82,7 +82,7 @@ function (baseService, config, $q) {
         return $http.get(url);
     };
 
-    
+
     }*/
 
 

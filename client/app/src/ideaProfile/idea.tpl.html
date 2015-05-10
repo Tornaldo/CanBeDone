@@ -20,11 +20,11 @@
             <!--Title + What and why-->
             <edit-field content="idea.title" on-edit="saveEdit()" template="{{'title'}}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
             </edit-field>
-            
+
             <div class="row idea-profile-why-what-container">
                 <edit-field content="idea.shortDescriptionWhat" on-edit="saveEdit()" label="What" class=" idea-profile-what col-xs-6 col-sm-6 col-md-6 col-lg-6"></edit-field>
                 <edit-field content="idea.shortDescriptionWhy" on-edit="saveEdit()"  label="Why" class="idea-profile-why col-xs-6 col-sm-6 col-md-6 col-lg-6"></edit-field>
-                
+
             </div>
             <edit-field content="idea.description" on-edit="saveEdit()" template="{{'text'}}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></edit-field>
 
@@ -81,13 +81,13 @@
                       $( "#drop1" ).hide();
 
                     }
-                  })  
+                  })
             </script>
 
-      
 
-           
-            
+
+
+
 
             <!--Thanks for liking - share!-->
             <!--Thanks for liking - your competence is wanted!-->
@@ -116,22 +116,22 @@
                         <h1 class="comment-title">
                             <b>Comment</b>
                         </h1>
-                        
+
                         <ppcomment-viewer idea-model="idea" comment-model="ideaComment"></ppcomment-viewer>
-                        
+
                         <hr>
                         <br>
                         <div class="row">
                             <div ng-hide="noCommentView"><b> NO COMMENTS </b></div>
                             <div ng-hide="sortCommentView" class="sort-by clearfix"><p >Sort comment: <select ng-model="sortCommentBy" class="" ng-options="option as option for option in commentSortOptions"></select> </p></div>
 
-                        </div>                   
+                        </div>
 
                         <article class="comment" ng-repeat="parentComment in ideaComment | orderBy:sortAttribute">
                             <pcomment-viewer comment-model="parentComment" ></pcomment-viewer>
-                        </article>   
-                </div> 
-            </div>    
+                        </article>
+                </div>
+            </div>
 
             <hr>
             <br><br>
@@ -139,7 +139,7 @@
 
             <!--See additional teams-->
             <!--Multiple teams are working on this idea-->
-      
+
             <div class="idea-profile-team-box">
                 <div class="idea-profile-team-box-competence-wanted"></div>
                 <div class="idea-profile-team-box-general-info"></div>

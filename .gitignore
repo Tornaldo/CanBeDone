@@ -120,5 +120,3 @@ nbproject
 node_modules
 client/node_modules
 client/bower_components
-.tmp
-.idea
