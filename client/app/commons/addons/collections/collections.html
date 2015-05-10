@@ -1,0 +1,14 @@
+
+<div id="collectionBox">
+	<ul class="list-inline">
+		<li>
+			<div ng-if="element.image_url">
+				<img id="collectionListImage" src="{{element.image_url}}">
+			</div>
+		</li>
+		<li>
+			<p>{{element.name}}</p>
+			<p class="greyFontXSm">by <a ui-sref="profile({id: element.poster.id})" ng-click="$event.stopPropagation()">{{element.poster.fullName}}</a></p>
+		</li>
+	</ul>
+</div>

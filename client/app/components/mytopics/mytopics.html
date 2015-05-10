@@ -1,0 +1,36 @@
+
+<div id="playlistInfoBoxTitle">
+  <p class="myPlaylistTitle">My Topics</p>
+</div>
+<div class="jumbotron" id="playlistInfoBox">
+  <div ng-show="!showTopicForm">
+    <button class="btn btn-default" ng-click="showTopicForm = !showTopicForm;"><span class="glyphicon glyphicon-plus"></span> Create New Topics</button>
+  </div>
+  <div ng-show="showTopicForm">
+    <form ng-submit="createNewTopic()">
+      <input type="text" ng-click="$event.stopPropagation()" class="form-control" placeholder="Name" ng-model="topicName">
+      <input type="text" ng-click="$event.stopPropagation()" class="form-control" placeholder="Input" ng-model="topicDescription">
+      <button type="submit" class="btn btn-success">Create new topic</button>
+    </form>
+
+  </div>
+  <table class="table table-striped table-hover ">
+    <thead>
+    </thead>
+    <tbody>
+      <tr ng-repeat="topic in topics">
+        <td  ng-class="{ selectedElement: isActiveList(topic.id)}" ng-click="passTopic(topic)">
+
+          <div class="listName">
+            <p>{{topic.name}}</p>
+          </div>       
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+

@@ -1,0 +1,29 @@
+<div ng-if="!topic">
+	<hr id="sidebarHR">
+	<div ng-show="!showTopicForm">
+
+		<p class="greyFontSm" ng-click="isAllowedToCreateNewTopic()"><span class="menu-icon fa fa-plus"></span> Create New Collection</p>
+	</div>
+	<div ng-show="showTopicForm">
+		<form ng-submit="createCollection(null, topic.name)" >
+			<input type="text" ng-click="$event.stopPropagation()" class="form-control" placeholder="Give your collection a name" ng-model="topic.name">
+			<!-- 	    <input type="text" ng-click="$event.stopPropagation()" class="form-control" placeholder="Input" ng-model="topicDescription"> -->
+			<br>
+			<button type="submit" class="btn btn-success">Submit</button>
+			
+		</form>
+	</div>
+</div>
+<div ng-if="topic">
+	<div ng-show="!showTopicForm">
+
+		<p class="greyFontSm" ng-click="isAllowedToCreateNewTopic()"><span class="menu-icon fa fa-plus"></span> Add Sub Collection</p>
+	</div>
+	<div ng-show="showTopicForm">
+		<form ng-submit="createCollection(topic, subTopic.name)">
+			<input type="text" ng-click="$event.stopPropagation()" class="form-control" placeholder="Give your collection a name" ng-model="subTopic.name">
+			<!-- 	    <input type="text" ng-click="$event.stopPropagation()" class="form-control" placeholder="Input" ng-model="topicDescription"> -->
+			<button type="submit" ng-show="false" class="btn btn-success">Submit</button>
+		</form>
+	</div>
+</div>

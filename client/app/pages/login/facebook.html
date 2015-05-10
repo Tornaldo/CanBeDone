@@ -1,0 +1,12 @@
+<div class="jumbotron">
+    <br><br>
+
+    <h2> Login with your facebook account</h2>
+
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+
+    <button ng-click="facebookLogout()">Logout from facebook</button>
+
+    <div id="status"></div>
+</div>

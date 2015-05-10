@@ -1,0 +1,289 @@
+$icon-font-path: "/fonts/";
+
+@import 'bootstrap-lumen.css';
+@import 'animations.scss';
+@import 'checkbox.scss';
+@import 'global.scss';
+@import 'loading.scss';
+@import 'typography.scss';
+@import 'textformat.scss';
+@import '../components/resource/resource.scss';
+@import '../components/topicbar/topicbar.scss';
+@import '../components/navbar/navbar.scss';
+@import '../components/submit/submit.scss';
+@import '../components/playlistbar/playlistbar.scss';
+@import '../pages/home/home.scss';
+@import '../pages/login/login.scss';
+@import '../pages/search/search.scss';
+@import '../pages/playlist/playlist.scss';
+@import '../pages/profile/profile.scss';
+@import '../commons/addons/collections/collections.scss';
+@import '../commons/addons/playlists/playlists.scss';
+
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+#jumboBox {
+    padding: 15px;
+    margin-bottom: 0;
+    border-bottom-left-radius: 7px !important;
+    border-bottom-right-radius: 7px !important;
+}
+
+.whiteText {
+    color: white;
+}
+
+#sidebar {
+    width: 250px;
+    position: absolute;
+    margin-left: 590px;
+}
+
+#leftBar {
+    position: fixed;
+    width: 250px;
+}
+
+#topPadding {
+    padding-top: 80px;
+}
+
+.fadeout {
+    position: fixed; 
+    bottom: 0em;
+    width:100%;
+    height: 4em;
+    background: -webkit-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    ); 
+    background-image: -moz-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: -o-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: -ms-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+} 
+
+
+li {
+    list-style: none
+}
+
+table {
+    margin-top: 5px;
+}
+
+.greyFontXSm {
+    font-size: 13px !important;
+    color: #888888;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.greyFontSm {
+    font-size: 18px !important;
+    color: #888888;
+    font-weight: lighter;
+    cursor: pointer;
+}
+.greyFontSm:hover {
+    font-size: 18px !important;
+    color: #888888;
+    font-weight: lighter;
+    cursor: pointer;
+    color: orange;
+}
+
+.greyFontMd {
+    font-size: 26px !important; 
+    color: #888888;
+    font-weight: lighter;
+}
+
+.greyFontLg {
+    font-size: 38px !important;
+    color: #888888;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+hr {
+    border-top-color: #A0A0A0 !important;
+    margin-top: 10px; 
+}
+#sidebarHR {
+    width: 250px;
+}
+#navbarHR {
+    width: 250px;
+    margin: 0px;
+}
+
+.container {
+    width: 1200px !important;
+}
+
+.btn-primary {
+  color: #888888 !important;
+  background-color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #888888 !important;
+  background-color: #E0E0E0 !important;
+  border-color: #E0E0E0 !important;
+}
+
+a:link, a:hover {
+    color: orange;
+}
+
+a {
+    color: #E0E0E0;
+}
+
+hr {
+    width: 540px;
+}
+
+#inline {
+    display:inline;
+}
+
+#glyphRed {
+    color: red;
+}
+
+#glyphGreen {
+    color: green;
+}
+
+.midContainer {
+    width: 540px;
+    margin-left: 35px;
+}
+
+.table {
+    margin-bottom: 0px !important;
+}
+
+/*Navbar needs this shit to work!*/
+
+.input-group {
+    display: inline-table;
+    vertical-align: middle;
+
+    .input-group-addon,
+    .input-group-btn,
+    .form-control {
+        width: auto;
+    }
+}
+
+#sidebarEdit {
+    float: right;
+}
+
+#listName {
+    width: 200px;
+}
+
+#tableRowThin {
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+
+.modal-backdrop.in {
+    opacity: 0;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #F4F4F4;
+}
+
+.ui-helper-hidden-accessible { 
+    display:none; 
+}
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 0px;
+    font-size: 17.5px;
+    border-left: 3px solid orange;
+    background-color: #FAFAFA;
+    border-top-right-radius: 10px;
+}
+
+.breadcrumb {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #E0E0E0;
+    padding-bottom: 0px;
+    border-style: none;
+    margin-bottom: 0px; 
+}

@@ -1,0 +1,231 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>Corsane</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="noindex" />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="commons/styles/abn_tree.css">
+    <link rel="stylesheet" type="text/css" href="commons/styles/rdash.css">
+
+
+    <!-- build:css({.tmp,app}) commons/styles/main.css -->
+    <link rel="stylesheet" href="commons/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/summernote/dist/summernote.css">
+    <!-- endbuild -->
+
+  </head>
+  <body ng-app="corsaneApp" ng-controller="HomeCtrl" >
+
+    <div id="fb-root"></div>
+    <!-- <navbar></navbar> -->
+
+    <div class="spinner" id="spinnerPosition" ng-show="$root.loading.value">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+    
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div id="page-wrapper" class="open" ng-cloak>
+
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar">
+          <li class="sidebar-main">
+            <a ng-click="goHome(yourdrunk)">
+              <img src="images/corsaneLogo.png" id="logo" >
+            </a>
+          </li>
+          <li class="greyFontMd"><span>My Collections</span></li>
+          <li class="sidebar-list" ng-repeat="collection in user.collections">
+            <a ui-sref="topic({id: collection.id})">{{collection.name}} <span class="menu-icon fa fa-users"></span></a>
+          </li>
+          <li>
+            <addtopic></addtopic>
+          </li>
+        </ul>
+
+      </div>
+      <!-- End Sidebar -->
+
+      <div id="content-wrapper">
+        <div class="page-content">
+
+          <!-- Header Bar -->
+          <div class="row header">
+            <div class="col-xs-12">
+              <div class="user pull-right">
+                <ul class="list-inline">
+                    <li>
+                      <a ui-sref="login" ng-if="!user.username"><p id="navLink" >Login</p></a>
+                      <a ui-sref="profile({id: user.id})" ng-if="user.username"><p id="navLink">{{user.fullName}} </p></a>
+
+                    </li>
+
+                    <li>
+                      <a ng-click="logout()" ng-show="isLoggedIn">
+                        <p id="navLink">Logout</p>
+                      </a>
+                    </li>
+                </ul>
+              </div>
+              <div class="meta">
+                <ul class="list-inline">
+                <form class="navbar-form navbar-left" role="search" ng-submit="search(searchTerm)" ng-keyup="switchTopic($event.keyCode)"> 
+                  <div class="input-group add-on">
+
+                    
+                    <div ng-class="open ? 'btn-group open' : 'btn-group'"  ng-click="open = !open;$event.stopPropagation()">
+                      <input type="text" data-toggle="dropdown" ng-change="newInput(searchTerm)" class="form-control" placeholder="Search" ng-model="searchTerm" id="searchbar">
+                      
+                      <ul class="dropdown-menu" id="tableCellMiniDiv" ng-show="autoResult.length > 0" role="menu">
+                        <table class="table table-hover " id="dropTable">
+                          <thead>
+                          </thead>
+                          <tbody>
+                            <tr ng-repeat="topic in autoResult">
+                              <td ng-class="{selectedElement: isActiveTopic($index)}" ng-click="search(topic.name)">
+                                <p class="lead">{{topic.name}}</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </ul>
+                    </div>
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" id="searchBtn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                  </div>
+                </form>
+                </ul>  
+              </div>
+            </div>
+          </div>
+          <!-- End Header Bar -->
+
+          <!-- Main Content -->
+          <div ui-view></div>
+
+        </div><!-- End Page Content -->
+      </div><!-- End Content Wrapper -->
+    </div><!-- End Page Wrapper -->
+<!--     <div class="container" >
+        <div ui-view></div>        
+    </div>      
+ -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+ <!--    <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-53445749-1');
+       ga('send', 'pageview');
+    </script> -->
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/ng-file-upload/angular-file-upload.js"></script>
+    <!-- endbower -->
+    <script src="bower_components/summernote/dist/summernote.js"></script>
+    <script src="bower_components/angular-summernote/dist/angular-summernote.min.js"></script>
+    <!-- endbuild -->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    
+
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="app.js"></script>
+    <script src="pages/home/home.js"></script>
+    <script src="pages/search/search.js"></script>
+    <script src="pages/playlist/playlist.js"></script>
+    <script src="pages/login/login.js"></script>
+    <script src="pages/logout/LogoutController.js"></script>
+    <script src="pages/login/facebook.js"></script>
+    <script src="pages/profile/profile.js"></script>
+    <script src="pages/topic/topic.js"></script>
+    <script src="components/submit/submit.js"></script>
+    <script src="components/submit/submit.directive.js"></script>
+    <script src="components/playlistbar/playlistbar.js"></script>
+    <script src="components/playlistbar/playlistbar.directive.js"></script>
+    <script src="components/navbar/navbar.js"></script>
+    <script src="components/navbar/navbar.directive.js"></script>
+    <script src="components/resource/resource.js"></script>
+    <script src="components/resource/resource.directive.js"></script>
+    <script src="components/resource/element.directive.js"></script>
+    <script src="components/resource/youtube.directive.js"></script>
+    <script src="components/resource/checkbox.directive.js"></script>
+    <script src="components/myplaylists/myplaylists.directive.js"></script>
+    <script src="components/myplaylists/myplaylists.js"></script>
+    <script src="components/mytopics/mytopics.js"></script>
+    <script src="components/mytopics/mytopics.directive.js"></script>
+    <script src="components/topicbar/topicbar.js"></script>
+    <script src="components/topicbar/topicbar.directive.js"></script>
+    <script src="commons/directives/sortable.js"></script>
+    <script src="commons/directives/abn_tree_directive.js"></script>
+    <script src="commons/filters/reverse.js"></script>
+    <script src="commons/services/resource.js"></script>
+    <script src="commons/services/list.js"></script>
+    <script src="commons/services/global.js"></script>
+    <script src="commons/services/login.js"></script>
+    <script src="commons/services/http.js"></script>
+    <script src="commons/services/api.js"></script>
+    <script src="commons/services/file.js"></script>
+    <script src="commons/services/topic.js"></script>
+    <script src="commons/services/user.js"></script>
+    <script src="commons/services/rating.js"></script>
+    <script src="commons/services/collection.js"></script>
+    <script src="commons/addons/addresource.js"></script>
+    <script src="commons/addons/addsection.js"></script>
+    <script src="commons/addons/addplaylist/addplaylist.js"></script>
+    <script src="commons/addons/modal/modal.js"></script>
+    <script src="commons/addons/modal/modal.directive.js"></script>
+    <script src="commons/addons/modal/modalinstance.js"></script>
+    <script src="commons/addons/addtopic/addtopic.js"></script>
+    <script src="commons/addons/star/star.js"></script>
+    <script src="commons/addons/star/unstar.js"></script>
+    <script src="commons/addons/collections/collections.directive.js"></script>
+    <script src="commons/addons/playlists/playlists.directive.js"></script>
+    
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+        window.doorbellOptions = {
+            timestamp: '<?php echo $time=time(); ?>',
+            token: '<?php echo $token=mt_rand(0, 999999); ?>',
+            signature: '<?php echo hash_hmac(sha256, $time.$token, 3vHahJ3u5oFTPlIjTSjjann8g0Xi45nEZK5lFcmfKSWMyZQnRgg14xuMrXPG09Ex); ?>',
+            appKey: 'O7FCc0P4nubyWC2kny2dIAyoFexw4wKR5T1Cm2FIWw53cBICXQh7x3LaMzInn4Sl'
+        };
+        (function(d, t) {
+            var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/880?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g);
+        }(document, 'script'));
+    </script>
+
+</body>
+</html>

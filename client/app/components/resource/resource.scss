@@ -1,0 +1,393 @@
+.orange {
+	font-size: 14px;
+}
+
+#addToList {
+	margin-top: -25px;
+}
+
+#levels {
+	display: inline-block;
+	width: 100%;
+}
+
+.selected {
+  color: orange;
+}
+
+#resourceUl {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#resourceInfoBox {
+	padding: 15px;
+	padding-bottom: 0px;
+	margin-bottom: 10px;
+	border-radius: 8px !important;
+	width: 540px;
+
+}
+
+#sectionInfoBox {
+	padding: 15px;
+	margin-bottom: 15px;
+	border-radius: 8px !important;
+	margin-left: 20px;
+	padding-top: 8px;
+}
+
+.resourceName {
+	
+}
+
+
+.progress {
+    width: 50px;
+    margin-bottom: 0px;
+    background-color: #FAFAFA;
+    opacity: 0.5;
+    height: 13px;
+    margin-top: 1px;
+}
+
+.progress-bar-success {
+	background-color: #888888;
+}
+
+.progress span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    color: black;
+ }
+
+#toolbox {
+    display:inline;
+    float: left;
+    margin-top: 10px;
+}
+
+#toolVote {
+	display:inline;
+	float:right;
+	margin: 10px;
+}
+
+.infoBox {
+	width: 538px;
+	margin-left: 1px;
+	padding-bottom: 0px;
+	background-color: white;
+	padding-top: 3px;
+	height: 25px;
+	margin-top: -2px;
+}
+
+.toolLabel {
+	margin-top: 10px;
+}
+
+resource:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -80px; 
+  height: 80px; 
+  visibility: hidden; 
+}
+
+#removeTop {
+	font-size: 14px;
+	color: #888888;
+	padding-left: 10px;
+}
+
+#leadResourceText {
+	display: inline;
+	font-weight: 600;
+}
+
+#leadResourceText2 {
+	display: inline;
+	padding-left: 20px;
+	font-weight: 600;	
+}
+
+.playlistTitle {
+	text-align: center;
+	font-weight: bold;
+	font-size: 60px !important;
+}
+
+
+.number {
+	float: left;
+	display: inline;
+	font-size: 36px;
+	margin-top: 20px;
+	opacity: 0.2;
+}
+
+resource {
+	display: inline;
+}
+
+.elementRepeater {
+	display: inline;
+}
+
+.verticalLine {
+    border-left: thin solid #B8B8B8;
+    padding-left: 10px;
+}
+
+.verticalLine:hover {
+    border-left: thin solid #B8B8B8;
+    padding-left: 10px;
+    color: orange;
+}
+
+.verticalLine span:hover {
+	color: orange;
+}
+
+.list-inline {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+
+}
+
+#voteUp {
+	padding-left: 10px;
+}
+#voteUp-inactive {
+	color: #eee;
+	padding-left: 10px;
+}
+
+#voteDown {
+	border-left: none;
+	padding-left: 0px;
+}
+
+#resourceBox {
+	padding: 0px;
+	padding-left: 10px;
+	height: 100px;
+	width: 540px;
+	overflow: hidden;
+	margin-bottom: 0px;
+	background-color: white;
+	
+}
+
+#imageBox {
+	height: 115px;
+	width: 135px;
+	overflow: hidden;
+	padding-top: 10px;
+	margin-right: 5px;
+}
+
+#resourceBox-text {
+	padding: 0px;
+	width: 	540px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+#resourceText {
+	width: 530px;
+	overflow: hidden;
+	padding: 10px;
+	height: 108px;
+	padding-top: 0px;
+	padding-left: 20px;
+
+}
+
+#resourceText p {
+	font-size: 13px;
+	padding-top: 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4; /* number of lines to show */
+	max-height: 75px; 
+
+}
+
+#text-content {
+	width: 530px;
+	padding: 10px;
+	padding-top: 0px;
+	padding-left: 20px;
+}
+
+#text-content p {
+	font-size: 13px ;
+}
+
+.text-content-inner {
+	position: absolute;  
+	width: 540px;	
+	/* "transparent" only works here because == rgba(0,0,0,0) */
+	background-image: linear-gradient(to bottom, transparent, white);
+}
+
+#resourceBox-video {
+	padding: 0px;
+  	width: 540px;
+  	margin-bottom: 0px;
+  	overflow: hidden;
+  	border-width: 3px;
+  	border-radius: 5px;
+
+}
+
+
+#resourceVideo {
+	height: 330px;
+	width: 538px;
+	margin-left: -1px;
+	margin-bottom: -5px;
+}
+
+#resourceHover:hover {
+	-webkit-box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.4);
+	-moz-box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.4);
+	box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.4);
+}
+
+#resourceBox li{
+	vertical-align: top;
+}
+
+#resourceDescBox{
+	width: 375px;
+
+}
+
+#resourceTextBox{
+	width: 530px;
+
+}
+
+#resourceImage-width {
+	margin: 0px;
+	width: 150px;
+}
+
+#resourceImage-height {
+	margin: 0px;
+	height: 80px;
+}
+
+
+#resourceDesc {
+	font-size: 13px;
+	padding-top: 0px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3; /* number of lines to show */
+	max-height: 75px;       /* fallback */
+}
+
+#elementDescription {
+	padding: 10px;
+	padding-bottom: 0px;
+	width: 540px;
+	margin-bottom: -10px;
+	overflow: hidden;
+	background-color: #FFF;
+	border-left-width: medium;
+	border-left-color: orange;
+}
+
+#elementDescription ul{
+	display: table;
+}
+
+#elementDescriptionText{
+	display: table-cell;
+}
+
+#elementDescriptionText p{
+}
+
+#elementDescriptionPoster {
+	display: table-cell;
+}
+
+#resourceProv {
+	font-size: 13px;
+	font-weight: normal;
+	text-align: right;
+	margin-right: 10px;
+	margin-top: -30px;
+}
+
+#resourceProvText {
+	font-size: 13px;
+	font-weight: normal;
+	text-align: right;
+	margin-right: 10px;
+	margin-top: -23px;
+	padding-bottom: 5px;
+}
+
+#resourceProvText img{
+	height: 15px;
+	margin: 0px;
+	margin-right: 6px;
+
+}
+
+#resourceProv img{
+	height: 13px;
+	margin: 0px;
+	margin-right: 6px;
+
+}
+
+#checkIcon {
+	padding-left: 10px;
+}
+
+#infoboxList {
+
+}
+
+
+#resourceFrame {
+	overflow: hidden;
+}
+
+#addresource {
+	margin-bottom: 10px;
+	color: #888888;
+	cursor: pointer;
+}
+
+#addresource:hover {
+	margin-bottom: 10px;
+	color: #888888;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.progress-bar {
+	color: black;
+}
+
+#resourceTitleBox {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}

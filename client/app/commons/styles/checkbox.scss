@@ -1,0 +1,74 @@
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"] + label {
+	cursor: pointer;
+	font-size: 1em;
+}
+
+[id^="checkbox-9-"] + label {
+	background-color: #FFF;
+	padding: 14px;
+	border-radius: 5px;
+	display: inline-block;
+	position: relative;
+	margin-right: 30px;
+	margin-left: 10px;
+
+	width: 50px;
+	box-shadow: 0 0 1px rgba(0,0,0,0.6);
+	height: 10px;
+}
+
+[id^="checkbox-9-"] + label:before {
+	content: ' ';
+	position: absolute;
+	background: white;
+	top: -1px;
+	z-index: 99999;
+	left: -1px;
+	width: 21px;
+	height: 30px;
+	border-radius: 3px;
+	box-shadow: 0 0 1px rgba(0,0,0,0.6), inset 0 -18px 15px -10px rgba(0,0,0,0.05);
+}
+
+[id^="checkbox-9-"] + label:after {
+	content: 'NO';
+	position: absolute;
+	top: 3px;
+	left: 25px;
+	font-size: 1.2em;
+	color: #868686;
+}
+
+[id^="checkbox-9-"]:checked + label:after {
+	content: 'YES';
+	left: 8px;
+	color: #21BE92;
+}
+
+[id^="checkbox-9-"]:checked + label:before {
+	content: ' ';
+	position: absolute;
+	z-index: 99999;
+	left: 44px;
+}
+
+#checkbox-9-3 + label:before, #checkbox-9-4 + label:before {
+	width: 21px;
+	height: 24px;
+	top: 2px;
+	left: 2px;
+}
+
+#checkbox-9-3:checked + label:before, #checkbox-9-4:checked + label:before {
+	left: 40px;
+}
+
+#checkbox-9-2 + label:after, #checkbox-9-2 + label:before, #checkbox label,
+#checkbox-9-4 + label:after, #checkbox-9-4 + label:before, #checkbox label {
+	-webkit-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in;
+}

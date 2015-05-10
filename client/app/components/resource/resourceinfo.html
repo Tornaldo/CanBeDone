@@ -1,0 +1,41 @@
+
+
+<blockquote ng-show="element.note || note.edit">
+	<form ng-show="note.edit" ng-submit="postNote(element.note, element.id)">
+		<input class="form-control" ng-model="element.note">
+		<button ng-show="false" type="submit" class="btn btn-success">Submit</button>
+	</form>
+	<p ng-show="!note.edit" class="greyFontXSm">{{element.note}} -<a ui-sref="profile({id: poster.id})" id="profileLink" ng-click="$event.stopPropagation()" class="ng-binding"> {{poster.fullName}}</a></p>
+</blockquote>
+
+<!-- <div ng-if="element.types[0].type == 'video'" id="resourceHover">
+<div class="jumbotron" id="resourceBox-video" >
+	
+	<iframe id="resourceVideo" src="{{element.url}}" frameborder="0" allowfullscreen></iframe>
+
+</div>
+	<div ng-include src="'components/resource/resource.html'"></div>
+</div> -->
+
+<div id="resourceHover">
+	<div class="jumbotron" id="resourceBox">
+		<ul class="list-inline" id ="infoboxList" ng-click="openLink(element.url)">
+			<li id="imageBox" ng-if="element.image_url != null">
+				<img id="{{element.image_width <= element.image_height ? 'resourceImage-width' : 'resourceImage-height'}}" ng-src="{{element.image_url}}">
+			</li>
+			<li>
+				<div id="resourceDescBox">
+					<div id="resourceTitleBox">
+						<p class="greyFontSm" id="leadResourceText">{{element.title}}
+						</p>
+					</div>
+					<p class="lead" id="resourceDesc">{{element.description}}</p>
+				</div>
+			</li>	
+		</ul>
+
+	</div>
+	<div ng-include src="'components/resource/resource.html'"></div>
+</div>
+
+<br>

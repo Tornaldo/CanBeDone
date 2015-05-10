@@ -1,0 +1,50 @@
+<div class="navbar navbar-default navbar-fixed-top" role"navigation">
+  <div class="container">
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav" id="centerNav">
+        
+        <li><img src="images/Logo.png" id="logo" ng-click="goHome(yourdrunk)">
+        </li>
+        <form class="navbar-form navbar-left" role="search" ng-submit="search(searchTerm)" ng-keyup="switchTopic($event.keyCode)"> 
+          <div class="input-group add-on">
+
+            
+            <div ng-class="open ? 'btn-group open' : 'btn-group'"  ng-click="open = !open;$event.stopPropagation()">
+              <input type="text" data-toggle="dropdown" ng-change="newInput(searchTerm)" class="form-control" placeholder="Search" ng-model="searchTerm" id="searchbar">
+              
+              <ul class="dropdown-menu" id="tableCellMiniDiv" ng-show="autoResult.length > 0" role="menu">
+                <table class="table table-hover " id="dropTable">
+                  <thead>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="topic in autoResult">
+                      <td ng-class="{selectedElement: isActiveTopic($index)}" ng-click="search(topic.name)">
+                        <p class="lead">{{topic.name}}</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </ul>
+            </div>
+            <div class="input-group-btn">
+              <button class="btn btn-default" id="searchBtn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+          </div>
+        </form>
+        <li>
+          <a ui-sref="login" ng-if="!user.userinfo.username"><p id="navLink" >Login</p></a>
+          <a ng-click="goProfile(user.userinfo.id)" ng-if="user.userinfo.username"><p id="navLink">Welcome {{user.userinfo.username}}!</p></a>
+
+        </li>
+
+        <li>
+          <a ui-sref="logout" ng-if="isLoggedIn">
+            <p id="navLink">Logout</p>
+          </a>
+        </li>
+
+      </div>
+      
+      
+    </div>
+  </div>

@@ -1,0 +1,88 @@
+<div ng-show="topic.name">
+
+	<p class="lead">
+	  <abn-tree tree-data="my_data" icon-leaf="" icon-expand="" icon-collapse=""></abn-tree>
+	</p>
+<!-- 
+	<div class="jumbotron" id="topicbar">
+	<p class="greyFontMd" ng-show="!topic.main_image.url">{{topic.name}}</p>
+	<div ng-if="topic.main_image.url">
+		<img id="topicImg" ng-src="{{topic.main_image.url}}">
+		<p class="greyFontMd" id="topicTitle">{{topic.name}}</p>
+	</div>
+	<ul>
+		<li>
+			<p type="button" class="greyFontSm" ng-show="starred.value" ng-click="starTopic(topic.topicId); starred.value = !starred.value"><span class="glyphicon glyphicon-star"></span> Star it!</p>
+			<p type="button" class="greyFontSm" ng-show="!starred.value" ng-click="unstarTopic(topic.topicId); starred.value = !starred.value"><span class="glyphicon glyphicon-star-empty"></span> Unstar</p>
+		</li>
+		<li ng-if="!topic.main_image.url">
+			<div ng-show="!showImageForm">
+
+			  <p class="greyFontSm" ng-click="showImageForm = !showImageForm;"><span class="glyphicon glyphicon-plus"></span> Add Image </p>
+			</div>
+			<div ng-show="showImageForm">
+			  <form ng-submit="addImage(imageUrl, topic)">
+			    <input type="text" placeholder="Paste in picture url" ng-click="$event.stopPropagation()" class="form-control" ng-model="imageUrl">
+			    <button type="submit" class="btn btn-success">Save</button>
+			  </form>
+			</div>
+		</li>
+		<li ng-if="!topic.description">
+			<div ng-show="!showDescForm">
+
+			  <p class="greyFontSm" ng-click="showDescForm = !showDescForm;"> Add Description </p>
+			</div>
+			<div ng-show="showDescForm">
+			  <form ng-submit="addDesc(description, topic)">
+			    <input type="text" ng-click="$event.stopPropagation()" class="form-control" ng-model="description">
+			    <button type="submit" class="btn btn-success">Save</button>
+			  </form>
+			</div>
+		</li>
+	</ul>
+
+	<div id="description">
+		<p ng-if="topic.description">{{topic.description}}</p>
+
+	</div>
+	<accordion close-others="oneAtATime">
+	    <accordion-group heading="Playlists" is-open="true">
+	    	<table class="table table-hover table-striped">
+	    	    <thead>
+	    	    </thead>
+	    	    <tbody>
+	    	      <tr ng-repeat="list in lists">
+	    	        <td ng-class="{ selectedElement: isActiveList(list.id, $index)}" ng-click="openPlaylist(list)">
+	    	          <p class="lead">{{list.name}}</p>
+	    	        </td>
+	    	      </tr>
+	    	    </tbody>
+	    	  </table>
+	    </accordion-group>
+	    <accordion-group heading="Subtopics">
+	      <p>Coming soon</p>
+	    </accordion-group>
+	  </accordion>
+	</div>
+</div>
+<div ng-show="!topic.name">
+	<div class="jumbotron" id="topicbar2">
+	<p class="greyFontMd">No topic found for <strong>"{{thisSearch}}"</strong>. Want to make one?</p>
+	<addtopic></addtopic>
+	<div ng-show="lists.length > 0">
+
+		<p class="greyFontLg">Playlists</p>
+		<table class="table table-hover ">
+		    <thead>
+		    </thead>
+		    <tbody>
+		      <tr ng-repeat="list in user.lists">
+		        <td ng-class="{ selectedElement: isActiveList(list.id, $index)}" ng-click="openPlaylist(list)">
+		          <p class="lead">{{list.name}}</p>
+		        </td>
+		      </tr>
+		    </tbody>
+		</table>
+	</div>
+	</div> -->
+</div>

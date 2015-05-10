@@ -1,0 +1,19 @@
+<div class="jumbotron" id="resourceInfoBox" ng-show="$root.user.username" ng-controller="SubmitCtrl">
+      <div class="resourceTop">
+        <p class="leadText">Share something useful
+          <span class="glyphicon glyphicon-remove" id="removeTop" ng-click="closeSubmit()"></span>
+        </p> 
+      </div>
+
+      <form ng-submit="submit(resource, collection)">
+	
+        <input type="text" class="form-control" placeholder="URL" ng-model="resource.url">
+        <br>
+	      <button type="submit" class="btn btn-success">Submit</button>
+
+      </form>
+      <br>
+  </div>
+  <div class="jumbotron" ng-show="!$root.user.username" id="resourceInfoBox">
+    <p>Sorry dude, need to login ;)</p>
+  </div>

@@ -1,0 +1,41 @@
+<!-- <div class="col-md-3">
+  <myplaylists ></myplaylists>
+</div> -->
+<div class="col-md-7">        
+        <p class="greyFontLg" id="frontText">Welcome to Corsane</p>
+        <p class="greyFontMd" id="frontText">The easiest way to share great content</p>
+
+        <img id="frontImage" src="images/frontpage.png">
+<!--         <div class="jumbotron" id="frontBox">
+          <img id="frontImage" src="http://u.osu.edu/eltosu/files/2014/10/wordcloud3-wq3dri.png">
+        </div>
+        <div id="frontBoxText">
+          <h1 id="leadResourceText">1. Create a new topic page</h1>
+        </div> -->
+
+</div>
+<div class="col-md-5" id="sidebar">
+  <p class="greyFontMd">Browse collections</p>
+
+  <ul>
+    <li ng-repeat="element in topics | reverse">
+      <div id="collectionBox" ng-if="element.parentCollections.id == undefined" ng-click="goCollection(element.id)">
+        <ul class="list-inline">
+          <li>
+            <div ng-if="element.image_url">
+              <img id="collectionListImage" src="{{element.image_url}}">
+            </div>
+          </li>
+          <li>
+            <p>{{element.name}}</p>
+            <p class="greyFontXSm">by <a ui-sref="profile({id: element.poster.id})" ng-click="$event.stopPropagation()">{{element.poster.fullName}}</a></p>
+          </li>
+        </ul>
+      </div>
+
+    </li>
+  </ul>
+</div>
+
+
+
